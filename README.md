@@ -2,11 +2,11 @@
 
 ### Membros da Equipe:
 
-Bianca Leão\
+Bianca Leão Rosa Silveira\
 Gabriel Dias\
 Anna Clara Pinto Bessa\
 Fernanda Maressa Antunes Alves\
-Vitória Sobrinho\
+Francisca Vitória Sobrinho\
 Francisco Maciel de Oliveira Araújo
 
 ### Link do Figma: 
