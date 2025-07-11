@@ -1,29 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap');
-/* Fonts: League Spartan, Quicksand, Mulish. */
 
-
-/* reset básico */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* corpo e altura */
 body, html, #root {
   height: 100%;
-  font-family: Arial, sans-serif;
+  font-family: "Mulish", "League Spartan", "Quicksand", Arial, sans-serif;
   background: #ffffff;
   color: #000000;
 }
 
-/* links */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* botões */
 button {
   font-family: "League Spartan";
   background: none;
@@ -33,8 +27,7 @@ button {
   font-size: 1em;
 }
 
-/* botão quando clicado */
-/*button:focus, button:active {
+button:focus, button:active {
   outline: 2px solid #48a488;
   border-radius: 10px;
-}*/
+}
