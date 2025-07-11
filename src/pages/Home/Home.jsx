@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../../assets/logo.svg";
 import "./Home.css";
 import NavBar from "../../components/NavBar";
 import CardItem from "../../components/CardItem";
@@ -10,7 +11,7 @@ export default function Home() {
       <NavBar />
 
       <section className="home-banner">
-        <img src="https://img.icons8.com/ios-filled/100/48a488/leaf.png" alt="EcoTroca" />
+        <img src={logo} alt="EcoTroca" />
         <h1>Bem-vindo à <span>EcoTroca</span></h1>
         <p>Conectamos pessoas para trocas sustentáveis.<br/>
         Dê nova vida aos seus itens usados e encontre tesouros únicos.</p>
