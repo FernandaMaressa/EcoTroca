@@ -1,5 +1,5 @@
 .perfil-container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 2rem auto;
   background: #f0faf5;
   padding: 2rem;
@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: space-between;
   background: #ffffff;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -55,20 +55,22 @@
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .item-card {
+  width: 450px;
+  height: 200px; 
   background: #fff;
   display: flex;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  width: 400px;
 }
 
 .item-card img {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 100%;
   object-fit: cover;
 }
 
