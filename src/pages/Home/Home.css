@@ -1,0 +1,66 @@
+.home-banner {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #e9f7f0;
+}
+
+.home-banner h1 span {
+  color: #48a488;
+}
+
+.home-banner .search-box {
+  margin-top: 2rem;
+}
+
+.home-banner .search-box input {
+  padding: 0.5rem;
+  width: 300px;
+  margin-right: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.home-banner .search-box button {
+  color: #fff;
+  background: #48a488;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.itens-recentes {
+  padding: 4rem 2rem;
+}
+
+.itens-recentes .cards {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.como-funciona {
+  padding: 4rem 2rem;
+  background: #e9f7f0;
+  text-align: center;
+}
+
+.como-funciona .steps {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 2rem;
+}
