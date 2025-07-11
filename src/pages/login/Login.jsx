@@ -1,6 +1,7 @@
 import './Login.css'
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import logo from "../../assets/logo.svg"
 
 
 function Login() {
@@ -12,24 +13,33 @@ function Login() {
     }
     return (
         <>
-            <div>
-                <span>← Voltar ao Início</span>
-                <h2>Bem Vindo de Volta!</h2>
-                <p>Entre com sua conta para continuar trocando</p>
-                <div>
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                        <div>
-                            <label>Email:</label>
-                            <input type="email"{...register("email", { required: "email obrigatorio" })} />
-                            {errors.email && <span>{errors.email.message}</span>}
-                        </div>
-                        <div>
-                            <label>Senha:</label>
-                            <input type="password"{...register("senha", { required: "senha obrigatorio" })} />
-                            {errors.senha && <span>{errors.senha.message}</span>}
-                        </div>
-                        <button type="submit">Entrar</button>
-                    </form>
+            <div className='loginP'>
+                <button className='voltarInicio'>← Voltar ao início</button>
+                <div className='loginLogo'>
+                    <img className='logo'
+                    src={logo} alt="Logo da EcoTroca" />
+                    <h1>EcoTroca</h1>
+                </div>
+                <div className='loginInfo'>
+                    <h2>Bem-vindo de volta!</h2>
+                    <p>Entre com sua conta para continuar trocando</p>
+                    <div className='loginForms'>
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <div>
+                                <label>Email</label>
+                                <br />
+                                <input placeholder='seu@email.com' type="email"{...register("email", { required: "email obrigatorio" })} />
+                                {errors.email && <span>{errors.email.message}</span>}
+                            </div>
+                            <div>
+                                <label>Senha</label>
+                                <br />
+                                <input placeholder='*************' type="password"{...register("senha", { required: "senha obrigatorio" })} />
+                                {errors.senha && <span>{errors.senha.message}</span>}
+                            </div>
+                            <button type="submit" className='entrarbtt'>Entrar</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </>

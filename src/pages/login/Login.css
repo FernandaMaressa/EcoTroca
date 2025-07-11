@@ -1,0 +1,99 @@
+body, html, #root {
+  height: 100%;
+  background: #ECFDF5;
+}
+
+.loginP{
+    box-sizing: border-box;
+    padding: 0;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.loginInfo {
+    margin-top: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+h2 {
+    font-family: "Quicksand";
+    margin-bottom: 1px;
+    color: #1C1C1C;
+}
+
+p {
+    font-family: "Quicksand";
+    margin-bottom: 40px;
+    color: #1C1C1C;
+    font-size: 14px;
+}
+
+label {
+    font-family: "Quicksand";
+    font-weight: bold;
+    font-size: 14px;
+    color: #1C1C1C;
+}
+
+input {
+    border: 1px solid;
+    border-color: #1C1C1C;
+    border-radius: 4px;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    width: 350px;
+    height: 25px;
+    padding: 5px;
+}
+
+.voltarInicio {
+    margin-top: 110px;
+    color: #1C1C1C; 
+    cursor: pointer;
+}
+
+.entrarbtt {
+    background-color: #43B3A0;
+    border: 2px solid #43B3A0;
+    border-radius: 4px;
+    height: 25px;
+    width: 350px;
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.entrarbtt:focus, .entrarbtt:active, .entrarbtt:hover{
+  border: 1px solid #8CC6B0;
+  background-color: #8CC6B0;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.voltarInicio:focus, .voltarInicio:active, .voltarInicio:hover{
+  color: #43B3A0;
+}
+
+.loginLogo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logo {
+    margin-top: 30px;
+    width: 15%;
+    margin-bottom: 30px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-family: "Quicksand";
+    color: #43B3A0;
+    display: inline-flex;
+}
