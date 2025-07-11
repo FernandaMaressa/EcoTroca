@@ -1,6 +1,7 @@
 import './Register.css'
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import logo from "../../assets/logo.svg"
 
 function Cadastro() {
 
@@ -19,29 +20,39 @@ function Cadastro() {
 
     return (
         <>
-            <div>
-                <h2>Criar Conta</h2>
-                <p>Junte-se a nossa comunidade sustentavel</p>
-                <form onSubmit={handleSubmit}>
-                    <div>
-                        <label>Nome:</label>
-                        <input type="text" value={name} onChange={(e)=>setName(e.target.value)} required/>
+            <div className='registerP'>
+                <button className='voltarInicio'>← Voltar ao início</button>
+                <div className='registerLogo'>
+                    <img className='logo'
+                        src={logo} alt="Logo da EcoTroca" />
+                    <h1>EcoTroca</h1>
+                </div>
+                <div className='registerInfo'>
+                    <h2>Criar Conta</h2>
+                    <p>Junte-se a nossa comunidade sustentavel</p>
+
+                    <div className='registerForms'>
+                        <form onSubmit={handleSubmit}>
+                            <div>
+                                <label>Nome</label>
+                                <input placeholder='Seu nome' type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+                            </div>
+                            <div>
+                                <label>Email</label>
+                                <input placeholder='seu@email.com' type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                            </div>
+                            <div>
+                                <label>Localização</label>
+                                <input placeholder='Cidade, Estado' type="text" value={city} onChange={(e) => setCity(e.target.value)} required />
+                            </div>
+                            <div>
+                                <label>Senha</label>
+                                <input placeholder='*******' type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                            </div>
+                            <button className='cadastrobtt'>Cadastrar</button>
+                        </form>
                     </div>
-                    <div>
-                        <label>Email:</label>
-                        <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} required/>
-                    </div>
-                    <div>
-                        <label>Cidade:</label>
-                        <input type="text" value={city} onChange={(e)=>setCity(e.target.value)} required/>
-                    </div>
-                    <div>
-                        <label>Senha:</label>
-                        <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} required/>
-                    </div>
-                    <button>Cadastrar</button>
-                </form>
-                
+                </div>
             </div>
         </>
     );

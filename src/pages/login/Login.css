@@ -1,9 +1,11 @@
-body, html, #root {
-  height: 100%;
-  background: #ECFDF5;
+body,
+html,
+#root {
+    height: 100%;
+    background: #ECFDF5;
 }
 
-.loginP{
+.loginP {
     box-sizing: border-box;
     padding: 0;
     width: 400px;
@@ -44,37 +46,47 @@ input {
     margin-top: 3px;
     margin-bottom: 10px;
     width: 350px;
-    height: 25px;
+    height: 30px;
     padding: 5px;
+    font-family: "Quicksand";
 }
 
 .voltarInicio {
     margin-top: 110px;
-    color: #1C1C1C; 
+    color: #1C1C1C;
     cursor: pointer;
+    font-family: "League Spartan";
+    background: none;
+    border: none;
+    font-size: 1em;
 }
 
 .entrarbtt {
     background-color: #43B3A0;
     border: 2px solid #43B3A0;
     border-radius: 4px;
-    height: 25px;
+    height: 30px;
     width: 350px;
     color: #ffffff;
     font-size: 14px;
     margin-top: 5px;
     cursor: pointer;
+    font-family: "Mulish";
 }
 
-.entrarbtt:focus, .entrarbtt:active, .entrarbtt:hover{
-  border: 1px solid #8CC6B0;
-  background-color: #8CC6B0;
-  color: #ffffff;
-  border-radius: 4px;
+.entrarbtt:focus,
+.entrarbtt:active,
+.entrarbtt:hover {
+    border: 1px solid #8CC6B0;
+    background-color: #8CC6B0;
+    color: #ffffff;
+    border-radius: 4px;
 }
 
-.voltarInicio:focus, .voltarInicio:active, .voltarInicio:hover{
-  color: #43B3A0;
+.voltarInicio:focus,
+.voltarInicio:active,
+.voltarInicio:hover {
+    color: #43B3A0;
 }
 
 .loginLogo {

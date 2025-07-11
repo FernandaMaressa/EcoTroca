@@ -17,7 +17,7 @@ function Login() {
                 <button className='voltarInicio'>← Voltar ao início</button>
                 <div className='loginLogo'>
                     <img className='logo'
-                    src={logo} alt="Logo da EcoTroca" />
+                        src={logo} alt="Logo da EcoTroca" />
                     <h1>EcoTroca</h1>
                 </div>
                 <div className='loginInfo'>
@@ -28,13 +28,13 @@ function Login() {
                             <div>
                                 <label>Email</label>
                                 <br />
-                                <input placeholder='seu@email.com' type="email"{...register("email", { required: "email obrigatorio" })} />
+                                <input placeholder='seu@email.com' type="email"{...register("email", { required: "Email obrigatório!" })} />
                                 {errors.email && <span>{errors.email.message}</span>}
                             </div>
                             <div>
                                 <label>Senha</label>
                                 <br />
-                                <input placeholder='*************' type="password"{...register("senha", { required: "senha obrigatorio" })} />
+                                <input placeholder='*************' type="password"{...register("senha", { required: "Senha obrigatória!" })} />
                                 {errors.senha && <span>{errors.senha.message}</span>}
                             </div>
                             <button type="submit" className='entrarbtt'>Entrar</button>
