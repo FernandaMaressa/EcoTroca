@@ -1,0 +1,30 @@
+.container-lista-itens {
+  padding: 2rem;
+  background-color: #f9fafb;
+}
+.container-input-search {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.096);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  max-width: 900px;
+  margin: 5px auto;
+  padding: 3px 7px;
+  margin-bottom: 30px;
+}
+#buscarItem {
+  border: none;
+  width: 100%;
+  padding: 1px 4px;
+}
+.section-card {
+  max-width: 900px;
+  margin: 5px auto;
+}
+.container-cards {
+  display: flex;
+  gap: 1.3rem;
+}

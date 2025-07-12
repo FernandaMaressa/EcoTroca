@@ -11,7 +11,7 @@ export default function CardItem({ imagem, titulo, desc, local, badge }) {
     >
       <div
         style={{
-          width: 210,
+          maxWidth: 210,
           height: 200,
           borderTopRightRadius: 8,
           borderTopLeftRadius: 8,
