@@ -1,12 +1,12 @@
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 
-export default function Sobre() {
+export default function Anunciar() {
   return (
     <section>
       <NavBar />
       <div>página</div>
-      <div>sobre</div>
+      <div>Anunciar itens</div>
       <Footer />
     </section>
   );

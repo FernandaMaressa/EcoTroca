@@ -32,45 +32,52 @@ export default function NavBar() {
         <div
           style={{
             display: "flex",
+            alignItems: "center",
             gap: "1.5rem",
             paddingRight: 7,
           }}
         >
-          <button
+          <a
             style={{
               background: "none",
               border: "none",
               color: "#000",
               cursor: "pointer",
               fontSize: "0.95rem",
+              textDecoration: "none",
             }}
+            href="/"
           >
             Início
-          </button>
-          <button
+          </a>
+          <a
             style={{
               background: "none",
               border: "none",
               color: "#000",
               cursor: "pointer",
               fontSize: "0.95rem",
+              textDecoration: "none",
             }}
+            href="/itens"
           >
             Itens
-          </button>
-          <button
+          </a>
+          <a
             style={{
               background: "none",
               border: "none",
               color: "#000",
               cursor: "pointer",
               fontSize: "0.95rem",
+              textDecoration: "none",
             }}
+            href="/sobre"
           >
             Sobre
-          </button>
+          </a>
         </div>
-        <button
+        <a
           style={{
             background: "none",
             border: "1px solid #48a488",
@@ -79,11 +86,13 @@ export default function NavBar() {
             padding: "0.3rem 0.6rem",
             cursor: "pointer",
             fontSize: "0.95rem",
+            textDecoration: "none",
           }}
+          href="/anunciar"
         >
           + Anunciar Item
-        </button>
-        <button
+        </a>
+        <a
           style={{
             background: "none",
             border: "none",
@@ -93,11 +102,13 @@ export default function NavBar() {
             alignItems: "center",
             gap: 5,
             fontSize: "0.95rem",
+            textDecoration: "none",
           }}
+          href="/login"
         >
           <User width={20} />
           Entrar
-        </button>
+        </a>
       </nav>
     </header>
   );

@@ -6,6 +6,7 @@ import Register from "./pages/register/Register";
 import Perfil from "./pages/perfil/Perfil";
 import Itens from "./pages/itens/Itens";
 import Sobre from "./pages/sobre/Sobre";
+import Anunciar from "./pages/anunciar/Anunciar";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/itens" element={<Itens />} />
+        <Route path="/anunciar" element={<Anunciar />} />
       </Routes>
     </Router>
   );
