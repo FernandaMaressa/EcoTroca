@@ -2,14 +2,26 @@
   text-align: center;
   padding: 4rem 2rem;
   background: #e9f7f0;
+  display: felx;
+  flex-direction: column;
+}
+.top-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-.home-banner h1 span {
+.home-banner h1 {
+  color: black;
+}
+.home-banner span {
   color: #48a488;
+  padding-left: 5px;
 }
-
 .home-banner .search-box {
-  margin-top: 2rem;
+  margin-top: 0.5rem;
 }
 
 .home-banner .search-box input {
@@ -31,19 +43,29 @@
 .stats-container {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 3rem;
+  gap: 3rem;
+  margin-top: 2rem;
 }
 
 .stat-card {
   background: #fff;
-  padding: 1rem 2rem;
+  padding: 1.7rem;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  justify-content: center;
+  align-items: center;
 }
 
 .itens-recentes {
   padding: 4rem 2rem;
+  background-color: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .itens-recentes .cards {
@@ -54,7 +76,7 @@
 
 .como-funciona {
   padding: 4rem 2rem;
-  background: #e9f7f0;
+  background: #fff;
   text-align: center;
 }
 
@@ -62,5 +84,23 @@
   display: flex;
   justify-content: center;
   gap: 4rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
+}
+
+.cont-num {
+  background-color: #d1fae5;
+  color: #48a488;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }
