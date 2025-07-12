@@ -1,9 +1,77 @@
 import React from "react";
+import { Star } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer style={{ textAlign: "center", padding: "1rem", background: "#f5f5f5", marginTop: "2rem" }}>
-      <p>© 2025 EcoTroca.</p>
+    <footer
+      style={{
+        textAlign: "center",
+        padding: "1.7rem",
+        background: "#43B3A0",
+        marginTop: "2rem",
+        color: "#ffffff",
+      }}
+    >
+      <section
+        style={{
+          display: "flex",
+          gap: 7,
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            flex: "0.7",
+            flexDirection: "column",
+            gap: 7,
+            textAlign: "left",
+          }}
+        >
+          <h2 style={{ color: "#fff" }}>EcoTroca</h2>
+          <div>
+            <Star color="#ffff00" fill="#ffff00" />
+            <Star color="#ffff00" fill="#ffff00" />
+            <Star color="#ffff00" fill="#ffff00" />
+            <Star color="#ffff00" fill="#ffff00" />
+            <Star color="#ffff00" fill="#ffff00" />
+          </div>
+        </div>
+        <div style={{ flex: "1", textAlign: "center" }}>
+          <h2 style={{ color: "#fff", marginBottom: 7 }}>Venha fazer parte</h2>
+          <p style={{ color: "#fff", fontSize: "0.9rem" }}>
+            Junte-se à nossa comunidade e comece a fazer a diferença hoje mesmo.
+            Cada troca é um passo em direção a um futuro mais sustentável.
+          </p>
+        </div>
+        <div style={{ flex: "0.7", textAlign: "center" }}>
+          <h2 style={{ color: "#fff", marginBottom: 7 }}>Links</h2>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 5,
+            }}
+          >
+            <a href="/" style={{ color: "#fff", textDecoration: "none" }}>
+              Início
+            </a>
+            <a href="/Sobre" style={{ color: "#fff", textDecoration: "none" }}>
+              Sobre
+            </a>
+            <a href="/itens" style={{ color: "#fff", textDecoration: "none" }}>
+              Produtos
+            </a>
+          </div>
+        </div>
+      </section>
+      <p
+        style={{
+          color: "#fff",
+          textAlign: "center",
+        }}
+      >
+        © 2025 EcoTroca.
+      </p>
     </footer>
   );
 }

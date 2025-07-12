@@ -4,6 +4,8 @@ import Home from "./pages/Home/Home";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import Perfil from "./pages/perfil/Perfil";
+import Itens from "./pages/itens/Itens";
+import Sobre from "./pages/sobre/Sobre";
 
 export default function App() {
   return (
@@ -13,6 +15,8 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/perfil" element={<Perfil />} />
+        <Route path="/sobre" element={<Sobre />} />
+        <Route path="/itens" element={<Itens />} />
       </Routes>
     </Router>
   );
