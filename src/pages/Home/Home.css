@@ -15,10 +15,11 @@
 
 .home-banner h1 {
   color: black;
+  font-size: 3rem;
 }
 .home-banner span {
   color: #48a488;
-  padding-left: 5px;
+  padding-left: 15px;
 }
 .home-banner .search-box {
   margin-top: 0.5rem;
