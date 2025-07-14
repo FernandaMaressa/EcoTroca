@@ -1,5 +1,5 @@
-import React from "react";
 import "./Perfil.css";
+import { Link } from "react-router-dom";
 import batman from "../../assets/batman.png";
 import capacete from "../../assets/capacete.png";
 import NavBar from "../../components/NavBar";
@@ -9,7 +9,7 @@ import logo from "../../assets/logo.svg";
 export default function Perfil() {
   return (
     <div>
-      <NavBar logo={logo} />
+      <NavBar/>
 
       <section className="perfil-container">
         <div className="perfil-header">
@@ -29,7 +29,7 @@ export default function Perfil() {
           </div>
         </div>
 
-        <button className="btn-cadastrar">+ Cadastrar Novo Item</button>
+        <Link to={"/anunciar"} className="btn-cadastrar">+ Cadastrar Novo Item</Link>
 
         <h3>Meus Itens</h3>
         <div className="meus-itens">

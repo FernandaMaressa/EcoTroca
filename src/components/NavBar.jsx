@@ -1,4 +1,5 @@
 import logo from "../assets/logo.svg";
+import { Link } from "react-router-dom";
 import { User } from "lucide-react";
 
 export default function NavBar() {
@@ -19,8 +20,8 @@ export default function NavBar() {
           alignItems: "center",
         }}
       >
-        <img src={logo} alt="logotipo" width={30} />
-        <h2 style={{ color: "#48a488" }}>EcoTroca</h2>
+        <Link to={"/"}><img src={logo} alt="logotipo" width={30} /></Link>
+        <Link to={"/"} style={{textDecoration: "none"}}><h2 style={{ color: "#48a488" }}>EcoTroca</h2></Link> 
       </div>
       <nav
         style={{
@@ -37,48 +38,32 @@ export default function NavBar() {
             paddingRight: 7,
           }}
         >
-          <a
-            style={{
+          <Link to={"/"} style={{
+            background: "none",
+            border: "none",
+            color: "#000",
+            cursor: "pointer",
+            fontSize: "0.95rem",
+            textDecoration: "none",
+          }}>Início</Link>
+          <Link to={"/itens"} style={{
+            background: "none",
+            border: "none",
+            color: "#000",
+            cursor: "pointer",
+            fontSize: "0.95rem",
+            textDecoration: "none",
+          }}>Itens</Link>
+          <Link to={"/sobre"} style={{
               background: "none",
               border: "none",
               color: "#000",
               cursor: "pointer",
               fontSize: "0.95rem",
               textDecoration: "none",
-            }}
-            href="/"
-          >
-            Início
-          </a>
-          <a
-            style={{
-              background: "none",
-              border: "none",
-              color: "#000",
-              cursor: "pointer",
-              fontSize: "0.95rem",
-              textDecoration: "none",
-            }}
-            href="/itens"
-          >
-            Itens
-          </a>
-          <a
-            style={{
-              background: "none",
-              border: "none",
-              color: "#000",
-              cursor: "pointer",
-              fontSize: "0.95rem",
-              textDecoration: "none",
-            }}
-            href="/sobre"
-          >
-            Sobre
-          </a>
+            }}>Sobre</Link>
         </div>
-        <a
-          style={{
+        <Link to={"/anunciar"} style={{
             background: "none",
             border: "1px solid #48a488",
             color: "#48a488",
@@ -87,13 +72,8 @@ export default function NavBar() {
             cursor: "pointer",
             fontSize: "0.95rem",
             textDecoration: "none",
-          }}
-          href="/anunciar"
-        >
-          + Anunciar Item
-        </a>
-        <a
-          style={{
+          }}>+ Anunciar Item</Link>
+          <Link to={"/login"} style={{
             background: "none",
             border: "none",
             color: "#000",
@@ -103,12 +83,7 @@ export default function NavBar() {
             gap: 5,
             fontSize: "0.95rem",
             textDecoration: "none",
-          }}
-          href="/login"
-        >
-          <User width={20} />
-          Entrar
-        </a>
+          }}> <User width={20}/> Entrar</Link>
       </nav>
     </header>
   );

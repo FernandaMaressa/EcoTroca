@@ -1,6 +1,7 @@
 import './Register.css'
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import logo from "../../assets/logo.svg"
 
 function Cadastro() {
@@ -21,7 +22,7 @@ function Cadastro() {
     return (
         <>
             <div className='registerP'>
-                <button className='voltarInicio'>← Voltar ao início</button>
+                <Link to={"/"} className='voltarInicio'>← Voltar ao início</Link>
                 <div className='registerLogo'>
                     <img className='logo'
                         src={logo} alt="Logo da EcoTroca" />

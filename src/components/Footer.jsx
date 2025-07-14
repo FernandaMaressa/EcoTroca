@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Star } from "lucide-react";
 
 export default function Footer() {
@@ -52,15 +53,9 @@ export default function Footer() {
               gap: 5,
             }}
           >
-            <a href="/" style={{ color: "#fff", textDecoration: "none" }}>
-              Início
-            </a>
-            <a href="/Sobre" style={{ color: "#fff", textDecoration: "none" }}>
-              Sobre
-            </a>
-            <a href="/itens" style={{ color: "#fff", textDecoration: "none" }}>
-              Produtos
-            </a>
+            <Link to={"/"} style={{color: "#fff", textDecoration: "none"}}>Início</Link>
+            <Link to={"/sobre"} style={{color: "#fff", textDecoration: "none"}}>Sobre</Link>
+            <Link to={"/itens"} style={{color: "#fff", textDecoration: "none"}}>Produtos</Link>
           </div>
         </div>
       </section>

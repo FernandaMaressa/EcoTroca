@@ -1,7 +1,8 @@
 import './Login.css'
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import logo from "../../assets/logo.svg"
+import { Link } from 'react-router-dom';
+import logo from "../../assets/logo.svg";
 
 
 function Login() {
@@ -14,7 +15,7 @@ function Login() {
     return (
         <>
             <div className='loginP'>
-                <button className='voltarInicio'>← Voltar ao início</button>
+                <Link to={"/"} className='voltarInicio'>← Voltar ao início</Link>
                 <div className='loginLogo'>
                     <img className='logo'
                         src={logo} alt="Logo da EcoTroca" />
