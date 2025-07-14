@@ -11,7 +11,7 @@
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  font-family: "Quicksand", sans-serif;
+  font-family: "League Spartan";
 }
 
 .anunciar-box h1 {
@@ -70,15 +70,16 @@
   color: white;
   padding: 0.8rem;
   font-size: 1rem;
-  font-weight: bold;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  font-family: "League Spartan";
 }
 
-.anunciar-box button:hover {
-  background-color: #379c8d;
+.anunciar-box button:hover,.anunciar-box button:focus,
+.anunciar-box button:active {
+  background-color: #8CC6B0;
 }
 
 .dicas-box {
@@ -98,4 +99,19 @@
 
 .dicas-box ul {
     margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+.anunciar-box input,
+.anunciar-box select,
+.anunciar-box textarea {
+  padding: 0.7rem;
+  font-family: inherit;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  background-color: #fefefe;
+  max-width: 280px;
+}
+
 }
