@@ -14,7 +14,7 @@
 }
 
 .home-banner h1 {
-  color: black;
+  color: #1C1C1C;
   font-size: 3rem;
 }
 .home-banner span {
@@ -58,6 +58,7 @@
   gap: 7px;
   justify-content: center;
   align-items: center;
+  color: #1C1C1C;;
 }
 
 .itens-recentes {
@@ -67,6 +68,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #1C1C1C;
 }
 
 .itens-recentes .cards {
@@ -79,6 +81,7 @@
   padding: 4rem 2rem;
   background: #fff;
   text-align: center;
+  color: #1C1C1C;
 }
 
 .como-funciona .steps {
@@ -86,6 +89,7 @@
   justify-content: center;
   gap: 4rem;
   margin-top: 3rem;
+  color: #1C1C1C;;
 }
 
 .cont-num {
@@ -104,4 +108,28 @@
   flex-direction: column;
   gap: 10px;
   align-items: center;
+  font-size: 20px;
+}
+
+@media (max-width: 600px) {
+  .stat-card {
+    max-width: 90px;
+  }
+
+  .stats-container {
+  gap: 1.5rem;
+}
+
+.home-banner h1 {
+  font-size: 1.5rem;
+  color: #1C1C1C;
+}
+
+.info-cont {
+  font-size: 14px;
+}
+.info-cont p{
+  font-size: 12px;
+}
+
 }
