@@ -7,6 +7,7 @@ import Footer from "../../components/Footer";
 import { Leaf, RefreshCcw, UsersRound } from "lucide-react";
 import img1 from "../../assets/batman.png";
 import img2 from "../../assets/capacete.png";
+import img3 from "../../assets/CarroBatman.png";
 
 export default function Home() {
   return (
@@ -67,10 +68,10 @@ export default function Home() {
             badge="Acesórios"
           />
           <CardItem
-            imagem={img1}
-            titulo="Boneco"
-            desc="Item usado"
-            local="Fortaleza-CE"
+            imagem={img3}
+            titulo="Carro Batman"
+            desc="Carrinho de coleção do Batman"
+            local="Iguatu-CE"
             badge="Brinquedo"
           />
         </div>
