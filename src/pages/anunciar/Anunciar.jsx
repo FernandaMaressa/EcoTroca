@@ -58,11 +58,93 @@ export default function Anunciar() {
               onChange={handleChange}
               required
             >
-              <option value="">Selecione uma categoria</option>
-              <option value="Brinquedos">Brinquedos</option>
-              <option value="Roupas">Roupas</option>
-              <option value="Livros">Livros</option>
-              <option value="Móveis">Móveis</option>
+              <option value="">Selecione a categoria</option>
+              <optgroup label="Eletrônicos">
+                <option value="Celulares e Smartphones">Eletrônicos - Celulares e Smartphones</option>
+                <option value="Computadores e Notebooks">Eletrônicos - Computadores e Notebooks</option>
+                <option value="Acessorios">Eletrônicos - Acessórios</option>
+                <option value="TVs, DVDs e Home Theater">Eletrônicos - TVs, DVDs e Home Theater</option>
+                <option value="Games e Consoles">Eletrônicos - Games e Consoles</option>
+              </optgroup>
+
+              <optgroup label="Eletrodomésticos">
+                <option value="Geladeira / Freezer">Eletrodomésticos - Geladeira / Freezer</option>
+                <option value="Fogao / Forno">Eletrodomésticos - Fogão / Forno</option>
+                <option value="Micro-ondas">Eletrodomésticos - Micro-ondas</option>
+                <option value="Maquina de Lavar">Eletrodomésticos - Máquina de Lavar</option>
+                <option value="Ventilador / Ar-condicionado">Eletrodomésticos - Ventilador / Ar-condicionado</option>
+              </optgroup>
+
+              <optgroup label="Móveis">
+                <option value="Sala">Móveis - Sala</option>
+                <option value="Quarto">Móveis - Quarto</option>
+                <option value="Cozinha">Móveis - Cozinha</option>
+                <option value="Escritorio">Móveis - Escritório</option>
+              </optgroup>
+
+              <optgroup label="Roupas e Calçados">
+                <option value="Roupas Femininas">Roupas e Calçados - Femininas</option>
+                <option value="Roupas Masculinas">Roupas e Calçados - Masculinas</option>
+                <option value="Roupas Infantis">Roupas e Calçados - Infantis</option>
+                <option value="Bolsas e Acessorios">Bolsas e Acessórios</option>
+              </optgroup>
+
+              <optgroup label="Livros e Papelaria">
+                <option value="Livros escolares">Livros - Escolares</option>
+                <option value="Livros de literatura">Livros - Literatura</option>
+                <option value="Revistas">Livros - Revistas</option>
+                <option value="Material de escritorio">Papelaria - Material de escritório</option>
+                <option value="Cadernos e agendas">Papelaria - Cadernos e agendas</option>
+              </optgroup>
+
+              <optgroup label="Esporte e Lazer">
+                <option value="Bicicletas">Esporte - Bicicletas</option>
+                <option value="Equipamentos esportivos">Esporte - Equipamentos esportivos</option>
+                <option value="Instrumentos musicais">Lazer - Instrumentos musicais</option>
+                <option value="Jogos de tabuleiro">Lazer - Jogos de tabuleiro</option>
+                <option value="Brinquedos">Lazer - Brinquedos</option>
+              </optgroup>
+
+              <optgroup label="Casa e Jardim">
+                <option value="Decoracao">Casa - Decoração</option>
+                <option value="Ferramentas">Casa - Ferramentas</option>
+                <option value="Utensilios domesticos">Casa - Utensílios domésticos</option>
+                <option value="Plantas e vasos">Jardim - Plantas e vasos</option>
+                <option value="Itens de jardinagem">Jardim - Itens de jardinagem</option>
+              </optgroup>
+
+              <optgroup label="Bebês e Crianças">
+                <option value="Carrinhos e cadeirinhas">Bebês e Crianças - Carrinhos e cadeirinhas</option>
+                <option value="Roupas e calçados infantis">Bebês e Crianças - Roupas e calçados</option>
+                <option value="Brinquedos educativos">Bebês e Crianças - Brinquedos</option>
+                <option value="Bercos e moveis infantis">Bebês e Crianças - Berços e móveis infantis</option>
+              </optgroup>
+
+              <optgroup label="Veículos e Peças">
+                <option value="Motos">Motos</option>
+                <option value="Pecas e acessorios automotivos">Peças e acessórios automotivos</option>
+              </optgroup>
+
+              <optgroup label="Beleza e Cuidados Pessoais">
+                <option value="Maquiagem">Maquiagem</option>
+                <option value="Produtos de higiene">Produtos de higiene</option>
+                <option value="Cosmeticos">Cosméticos</option>
+                <option value="Perfumes">Perfumes</option>
+              </optgroup>
+
+              <optgroup label="Pets">
+                <option value="Racoes">Pets - Rações</option>
+                <option value="Acessorios (coleiras, brinquedos)">Pets - Acessórios (coleiras, brinquedos)</option>
+                <option value="Casinhas e camas">Pets - Casinhas e camas</option>
+                <option value="Roupas para pets">Pets - Roupas</option>
+              </optgroup>
+
+              <optgroup label="Outros">
+                <option value="Itens Colecionaveis">Itens Colecionáveis</option>
+                <option value="Antiguidades">Antiguidades</option>
+                <option value="Artesanato">Artesanato</option>
+                <option value="Diversos">Diversos</option>
+              </optgroup>
             </select>
 
             <label>Estado *</label>
