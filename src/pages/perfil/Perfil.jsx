@@ -4,18 +4,17 @@ import batman from "../../assets/batman.png";
 import capacete from "../../assets/capacete.png";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
-import logo from "../../assets/logo.svg";
 
 export default function Perfil() {
   return (
     <div>
-      <NavBar/>
+      <NavBar />
 
       <section className="perfil-container">
         <div className="perfil-header">
-          <img 
+          <img
             className="perfil-avatar"
-            src="https://img.icons8.com/ios-filled/100/48a488/user-male-circle.png" 
+            src="https://img.icons8.com/ios-filled/100/48a488/user-male-circle.png"
             alt="Avatar"
           />
           <div>
@@ -24,17 +23,23 @@ export default function Perfil() {
             <p className="itens-cadastrados">2 Itens cadastrados</p>
           </div>
           <div className="perfil-actions">
-            <button>Alterar Dados</button>
-            <button>Sair</button>
+            <Link to={"/editarperfil"} className="perfil-actions">
+              Alterar Dados
+            </Link>
+            <Link to={"/"} className="perfil-actions">
+              Sair
+            </Link>
           </div>
         </div>
 
-        <Link to={"/anunciar"} className="btn-cadastrar">+ Cadastrar Novo Item</Link>
+        <Link to={"/anunciar"} className="btn-cadastrar">
+          + Cadastrar Novo Item
+        </Link>
 
         <h3>Meus Itens</h3>
         <div className="meus-itens">
           <div className="item-card">
-            <img src={batman} alt="Item Batman"/>
+            <img src={batman} alt="Item Batman" />
             <div className="item-info">
               <h4>Boneco Batman</h4>
               <p>Meu filho ganhou dois iguais.</p>
@@ -48,7 +53,7 @@ export default function Perfil() {
           </div>
 
           <div className="item-card">
-            <img src={capacete} alt="Item Capacete"/>
+            <img src={capacete} alt="Item Capacete" />
             <div className="item-info">
               <h4>Capacete</h4>
               <p>Usado por 1 ano e alguns meses.</p>

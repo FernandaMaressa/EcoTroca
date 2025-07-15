@@ -13,7 +13,7 @@
   background: #ffffff;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .perfil-avatar {
@@ -32,12 +32,14 @@
   font-size: 0.9rem;
 }
 
-.perfil-actions button {
+.perfil-actions {
   margin-left: 1rem;
   background: none;
   border: none;
   color: #000;
   cursor: pointer;
+  font-size: 11pt;
+  text-decoration: none;
 }
 
 .btn-cadastrar {
@@ -61,12 +63,12 @@
 
 .item-card {
   width: 450px;
-  height: 200px; 
+  height: 200px;
   background: #fff;
   display: flex;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .item-card img {

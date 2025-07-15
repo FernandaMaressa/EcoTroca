@@ -1,131 +1,133 @@
 body,
 html,
 #root {
-    height: 100%;
-    background: #ECFDF5;
+  height: 100%;
+  background: #ecfdf5;
 }
 
 .loginP {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 0;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .loginP img {
-    width: 50%;
+  width: 50%;
 }
 
 .loginInfo {
-    align-items: center;
-    justify-content: center;
-    width: 360px;
-    display: grid;
-    background: #ffffff;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 50px;
+  align-items: center;
+  justify-content: center;
+  width: 360px;
+  display: grid;
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
 }
 
 .loginP h2 {
-    font-family: "Quicksand";
-    margin-bottom: 1px;
-    color: #1C1C1C;
+  font-family: "Quicksand";
+  margin-bottom: 1px;
+  color: #1c1c1c;
 }
 
 .loginP p {
-    font-family: "Quicksand";
-    margin-bottom: 40px;
-    color: #1C1C1C;
-    font-size: 14px;
+  font-family: "Quicksand";
+  margin-bottom: 40px;
+  color: #1c1c1c;
+  font-size: 14px;
 }
 
 .loginP label {
-    font-family: "Quicksand";
-    font-weight: bold;
-    font-size: 14px;
-    color: #1C1C1C;
+  font-family: "Quicksand";
+  font-weight: bold;
+  font-size: 14px;
+  color: #1c1c1c;
 }
 
 .loginForms input {
-    width: 100%;
-    padding: 10px 12px;
-    line-height: 1.4;
-    font-size: 14px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    height: auto;
-    appearance: none;
-    font-family: "Quicksand";
-    margin-bottom: 20px;
+  width: 100%;
+  padding: 10px 12px;
+  line-height: 1.4;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  height: auto;
+  appearance: none;
+  font-family: "Quicksand";
+  margin-bottom: 20px;
 }
 
 .voltarInicio {
-    text-decoration: none;
-    margin-top: 80px;
-    color: #1C1C1C;
-    cursor: pointer;
-    font-family: "Mulish";
-    background: none;
-    border: none;
-    font-size: 0.9em;
+  text-decoration: none;
+  margin-top: 80px;
+  color: #1c1c1c;
+  cursor: pointer;
+  font-family: "Mulish";
+  background: none;
+  border: none;
+  font-size: 0.9em;
 }
 
 .entrarbtt {
-    width: 100%;
-    background-color: #43b3a0;
-    color: white;
-    padding: 0.8rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: "Mulish";
-    margin-top: 10px;
+  width: 100%;
+  background-color: #43b3a0;
+  color: white;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Mulish";
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .entrarbtt:focus,
 .entrarbtt:active,
 .entrarbtt:hover {
-    background-color: #8CC6B0;
-    color: #ffffff;
-    border-radius: 4px;
+  background-color: #8cc6b0;
+  color: #ffffff;
+  border-radius: 4px;
 }
 
 .voltarInicio:focus,
 .voltarInicio:active,
 .voltarInicio:hover {
-    color: #43B3A0;
+  color: #43b3a0;
 }
 
 .loginLogo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .logo {
-    margin-top: 30px;
-    width: 15%;
-    margin-bottom: 30px;
-    margin-right: 10px;
+  margin-top: 30px;
+  width: 15%;
+  margin-bottom: 30px;
+  margin-right: 10px;
 }
 
 .loginP h1 {
-    font-family: "Quicksand";
-    color: #43B3A0;
-    display: inline-flex;
+  font-family: "Quicksand";
+  color: #43b3a0;
+  display: inline-flex;
 }
 
 @media (max-width: 600px) {
-    .loginInfo {
-        width: 300px;
-    }
+  .loginInfo {
+    width: 300px;
+  }
 }

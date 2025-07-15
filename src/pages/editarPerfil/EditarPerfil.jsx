@@ -1,10 +1,10 @@
-import "./Register.css";
+import "./EditarPerfil.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 
-function Cadastro() {
+function EditarPerfil() {
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -14,7 +14,7 @@ function Cadastro() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/");
+    navigate("/perfil");
   };
 
   return (
@@ -26,8 +26,10 @@ function Cadastro() {
           <h1>EcoTroca</h1>
         </div>
         <div className="registerInfo">
-          <h2>Criar Conta</h2>
-          <p>Junte-se a nossa comunidade sustentavel</p>
+          <div className="registerInfo-title">
+            <h2>Atualizar Perfil</h2>
+            <p>Junte-se a nossa comunidade sustentavel</p>
+          </div>
 
           <div className="registerForms">
             <form onSubmit={handleSubmit}>
@@ -200,4 +202,4 @@ function Cadastro() {
     </>
   );
 }
-export default Cadastro;
+export default EditarPerfil;

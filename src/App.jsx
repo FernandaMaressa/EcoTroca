@@ -7,18 +7,20 @@ import Perfil from "./pages/perfil/Perfil";
 import Itens from "./pages/itens/Itens";
 import Sobre from "./pages/sobre/Sobre";
 import Anunciar from "./pages/anunciar/Anunciar";
+import EditarPerfil from "./pages/editarPerfil/EditarPerfil";
 
 export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/itens" element={<Itens />} />
         <Route path="/anunciar" element={<Anunciar />} />
+        <Route path="/editarperfil" element={<EditarPerfil />} />
       </Routes>
     </Router>
   );

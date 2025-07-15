@@ -10,12 +10,16 @@ export default function NavBar() {
   return (
     <header className="navbar">
       <div className="navbar-logo">
-        <Link to="/"><img src={logo} alt="logotipo" width={30} /></Link>
-        <Link to="/" className="navbar-title">EcoTroca</Link>
+        <Link to="/">
+          <img src={logo} alt="logotipo" width={30} />
+        </Link>
+        <Link to="/" className="navbar-title">
+          EcoTroca
+        </Link>
       </div>
 
-      <button 
-        className="navbar-toggle" 
+      <button
+        className="navbar-toggle"
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Abrir menu"
       >
@@ -24,13 +28,41 @@ export default function NavBar() {
 
       <nav className={`navbar-links ${menuOpen ? "open" : ""}`}>
         <div className="navbar-menu">
-          <Link to="/" className="navbar-link" onClick={() => setMenuOpen(false)}>Início</Link>
-          <Link to="/itens" className="navbar-link" onClick={() => setMenuOpen(false)}>Itens</Link>
-          <Link to="/sobre" className="navbar-link" onClick={() => setMenuOpen(false)}>Sobre</Link>
+          <Link
+            to="/"
+            className="navbar-link"
+            onClick={() => setMenuOpen(false)}
+          >
+            Início
+          </Link>
+          <Link
+            to="/itens"
+            className="navbar-link"
+            onClick={() => setMenuOpen(false)}
+          >
+            Itens
+          </Link>
+          <Link
+            to="/sobre"
+            className="navbar-link"
+            onClick={() => setMenuOpen(false)}
+          >
+            Sobre
+          </Link>
         </div>
-        <Link to="/anunciar" className="navbar-button" onClick={() => setMenuOpen(false)}>+ Anunciar Item</Link>
-        <Link to="/login" className="navbar-login" onClick={() => setMenuOpen(false)}>
-          <User width={20}/> Entrar
+        <Link
+          to="/anunciar"
+          className="navbar-button"
+          onClick={() => setMenuOpen(false)}
+        >
+          + Anunciar Item
+        </Link>
+        <Link
+          to="/perfil"
+          className="navbar-login"
+          onClick={() => setMenuOpen(false)}
+        >
+          <User width={20} /> Perfil
         </Link>
       </nav>
     </header>

@@ -53,9 +53,21 @@ export default function Footer() {
               gap: 5,
             }}
           >
-            <Link to={"/"} style={{color: "#fff", textDecoration: "none"}}>Início</Link>
-            <Link to={"/sobre"} style={{color: "#fff", textDecoration: "none"}}>Sobre</Link>
-            <Link to={"/itens"} style={{color: "#fff", textDecoration: "none"}}>Produtos</Link>
+            <Link to={"/"} style={{ color: "#fff", textDecoration: "none" }}>
+              Início
+            </Link>
+            <Link
+              to={"/sobre"}
+              style={{ color: "#fff", textDecoration: "none" }}
+            >
+              Sobre
+            </Link>
+            <Link
+              to={"/itens"}
+              style={{ color: "#fff", textDecoration: "none" }}
+            >
+              Itens
+            </Link>
           </div>
         </div>
       </section>
