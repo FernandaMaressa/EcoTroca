@@ -44,6 +44,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 1.3rem;
   grid-gap: 40px;
+  font-family: "Quicksand";
 }
 
 @media (max-width: 1000px) {
