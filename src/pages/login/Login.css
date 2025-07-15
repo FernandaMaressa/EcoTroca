@@ -15,7 +15,7 @@ html,
     align-items: center;
 }
 
-.loginP img{
+.loginP img {
     width: 50%;
 }
 
@@ -125,7 +125,7 @@ html,
 }
 
 @media (max-width: 600px) {
-    .loginInfo{
+    .loginInfo {
         width: 300px;
     }
 }

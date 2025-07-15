@@ -1,14 +1,14 @@
 h2 {
-    font-family: "Quicksand";
-    margin-bottom: 1px;
-    color: #1C1C1C;
+  font-family: "Quicksand";
+  margin-bottom: 1px;
+  color: #1C1C1C;
 }
 
 p {
-    font-family: "Quicksand";
-    margin-bottom: 40px;
-    color: #1C1C1C;
-    font-size: 14px;
+  font-family: "Quicksand";
+  margin-bottom: 40px;
+  color: #1C1C1C;
+  font-size: 1em;
 }
 
 .home-banner {
@@ -46,15 +46,26 @@ p {
   width: 300px;
   margin-right: 1rem;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 6px;
+  font-family: "Mulish";
+  margin: 10px;
 }
 
 .home-banner .search-box button {
   color: #fff;
-  background: #48a488;
+  background-color: #43b3a0;
   padding: 0.5rem 1rem;
-  border-radius: 4px;
+  border-radius: 6px;
   border: none;
+  font-family: "Mulish";
+  margin: 10px;
+}
+.home-banner .search-box button:focus, 
+.home-banner .search-box button:active, 
+.home-banner .search-box button:hover {
+   background-color: #8CC6B0;
+    color: #ffffff;
+    border-radius: 6px;
 }
 
 .stats-container1 {
