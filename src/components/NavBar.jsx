@@ -10,7 +10,7 @@ export default function NavBar() {
   return (
     <header className="navbar">
       <div className="navbar-logo">
-        <Link to="/">
+        <Link to="/home">
           <img src={logo} alt="logotipo" width={30} />
         </Link>
         <Link to="/" className="navbar-title">
@@ -29,7 +29,7 @@ export default function NavBar() {
       <nav className={`navbar-links ${menuOpen ? "open" : ""}`}>
         <div className="navbar-menu">
           <Link
-            to="/"
+            to="/home"
             className="navbar-link"
             onClick={() => setMenuOpen(false)}
           >
