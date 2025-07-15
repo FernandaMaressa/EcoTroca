@@ -21,16 +21,45 @@
   padding: 3px 7px;
   margin-bottom: 30px;
 }
+
 #buscarItem {
   border: none;
   width: 100%;
   padding: 1px 4px;
 }
+
 .section-card {
   max-width: 900px;
   margin: 5px auto;
 }
+
 .container-cards {
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.cards-itens {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.3rem;
+  grid-gap: 40px;
+}
+
+@media (max-width: 1000px) {
+  .cards-itens {
+    grid-template-columns: repeat(3, 1fr);
+}
+} 
+
+@media (max-width: 768px) {
+  .cards-itens {
+    grid-template-columns: repeat(2, 1fr);
+}
+} 
+
+@media (max-width: 600px) {
+  .cards-itens {
+    grid-template-columns: repeat(1, 1fr);
+}
 }

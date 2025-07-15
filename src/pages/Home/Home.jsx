@@ -31,7 +31,8 @@ export default function Home() {
           <button>Buscar →</button>
         </div>
 
-        <div className="stats-container">
+      <div className="stats-container1">
+        <div className="stats-container2">
           <div className="stat-card">
             <UsersRound color="#43b3a0" />
             <h3>1.2K+</h3>
@@ -47,6 +48,7 @@ export default function Home() {
             <h3>850+</h3>
             <p>Itens disponíveis</p>
           </div>
+        </div>
         </div>
       </section>
 

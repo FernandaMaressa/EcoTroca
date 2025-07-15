@@ -27,6 +27,7 @@ export default function Itens() {
             <span>x</span> itens encontrados
           </p>
           <div className="container-cards">
+            <div className="cards-itens">
             <CardItem
               imagem="https://cdn.pixabay.com/photo/2018/01/05/04/27/object-3062127_1280.jpg"
               titulo="Flores"
@@ -55,6 +56,7 @@ export default function Itens() {
               local="Fortaleza-CE"
               badge="Acessórios"
             />
+            </div>
           </div>
         </section>
       </section>
