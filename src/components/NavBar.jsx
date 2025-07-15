@@ -13,7 +13,7 @@ export default function NavBar() {
         <Link to="/home">
           <img src={logo} alt="logotipo" width={30} />
         </Link>
-        <Link to="/" className="navbar-title">
+        <Link to="/home" className="navbar-title">
           EcoTroca
         </Link>
       </div>

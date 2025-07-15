@@ -53,7 +53,10 @@ export default function Footer() {
               gap: 5,
             }}
           >
-            <Link to={"/"} style={{ color: "#fff", textDecoration: "none" }}>
+            <Link
+              to={"/home"}
+              style={{ color: "#fff", textDecoration: "none" }}
+            >
               Início
             </Link>
             <Link
