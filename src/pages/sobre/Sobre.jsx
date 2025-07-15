@@ -2,6 +2,7 @@ import React from "react";
 import "./Sobre.css";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
+import { Bold } from "lucide-react";
 
 export default function Sobre() {
   return (
@@ -48,6 +49,41 @@ export default function Sobre() {
                 <h3>Confiança</h3>
                 <p>Criamos um ambiente seguro e transparente onde as trocas acontecem com base na confiança mútua.</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="sobre-historia">
+        <div className="bloco-historia">
+          <div className="bloco-texto-historia">
+            <h2>Nossa História</h2>
+            <div className="texto-historia">
+              <p>A EcoTroca nasceu da observação de que muitos itens em perfeito estado de uso ficam guardados sem utilidade, enquanto outras pessoas procuram exatamente por esses mesmos itens. Percebemos uma oportunidade de conectar essas necessidades de forma sustentável.</p>
+              <p>Em 2023, decidimos criar uma plataforma que fosse além de apenas facilitar trocas. Queríamos construir uma comunidade consciente, onde cada transação contribui para um mundo mais sustentável e colaborativo.</p>
+              <p>Hoje, a EcoTroca conecta milhares de pessoas em todo o Brasil, promovendo não apenas trocas de itens, mas também a troca de experiências e a construção de relações baseadas na confiança e no respeito mútuo.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="sobre-impacto">
+        <div className="bloco-impacto">
+          <h2>Nosso Impacto</h2>
+          <div className="grid-impacto">
+            <div className="dado-1">
+              <div className="dado-1-numero">1,200+</div>
+              <div className="dado-1-texto">Usuários ativos</div>
+            </div>
+            <div className="dado-2">
+              <div className="dado-2-numero">3,500+</div>
+              <div className="dado-1-texto">Trocas realizadas</div>
+            </div>
+            <div className="dado-3">
+              <div className="dado-3-numero">850+</div>
+              <div className="dado-1-texto">Itens disponíveis</div>
+            </div>
+            <div className="dado-4">
+              <div className="dado-4-numero">15 ton</div>
+              <div className="dado-1-texto">CO₂ economizado</div>
             </div>
           </div>
         </div>
