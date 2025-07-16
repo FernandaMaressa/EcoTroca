@@ -58,7 +58,7 @@ export default function Home() {
           <CardItem
             imagem={img1}
             titulo="Boneco"
-            desc="Item usado"
+            desc="Boneco do Batman em bom estado."
             local="Fortaleza-CE"
             badge="Brinquedo"
           />
