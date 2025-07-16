@@ -46,6 +46,7 @@ export default function Detalhes() {
       id: "3",
       imagem: img3,
       nome: "Fernanda Antunes",
+      data: "05/01/2025",
       titulo: "Carro Batman",
       desc: "Carrinho de coleção do Batman. Perfeito para fãs do herói, em excelente estado de conservação.",
       local: "Iguatu-CE",
@@ -109,9 +110,9 @@ export default function Detalhes() {
               />
               <div className="detalhes-info">
                 <h2>{item.titulo}</h2>
-                <p>Publicado em {item.data}</p>
+                <p className="detalhes-data">Publicado em {item.data}</p>
                 <p className="detalhes-desc">{item.desc}</p>
-                <p className="">Anunciante: {item.nome}</p>
+                <p className="detalhes-nome">Anunciante: {item.nome}</p>
                 <p className="detalhes-local">📍 {item.local}</p>
                 <span className="detalhes-badge">{item.badge}</span>
 

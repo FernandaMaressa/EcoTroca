@@ -6,7 +6,8 @@ body {
 .detalhes-container {
   max-width: 900px;
   margin: 2rem auto;
-  background: #fff; /* fundo branco */
+  background: #fff;
+  /* fundo branco */
   padding: 2rem;
   border-radius: 8px;
   display: flex;
@@ -31,9 +32,20 @@ body {
 
 .detalhes-desc {
   color: #333;
+  margin-bottom: 0.5rem;
 }
 
 .detalhes-local {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.detalhes-nome {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.detalhes-data {
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
 }
@@ -89,10 +101,12 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #2db9ac; /* Cor verde-água */
+  background-color: #2db9ac;
+  /* Cor verde-água */
   color: white;
   border: none;
-  border-radius: 50%; /* Deixa o botão redondo */
+  border-radius: 50%;
+  /* Deixa o botão redondo */
   width: 56px;
   height: 56px;
   font-size: 24px;
@@ -102,13 +116,15 @@ body {
 }
 
 .chat-toggle-button:hover {
-  background-color: #24988e; /* Tom mais escuro ao passar o mouse */
+  background-color: #24988e;
+  /* Tom mais escuro ao passar o mouse */
 }
 
 /* Janela do chat - aparece acima do botão flutuante */
 .chat-widget {
   position: fixed;
-  bottom: 90px; /* Um pouco acima do botão */
+  bottom: 90px;
+  /* Um pouco acima do botão */
   right: 20px;
   width: 300px;
   background-color: white;
@@ -187,7 +203,8 @@ body {
 }
 
 .user-message {
-  background-color: #dcf8c6; /* verde claro tipo WhatsApp */
+  background-color: #dcf8c6;
+  /* verde claro tipo WhatsApp */
   align-self: flex-end;
   padding: 8px 12px;
   border-radius: 16px;
