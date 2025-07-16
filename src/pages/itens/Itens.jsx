@@ -31,28 +31,28 @@ export default function Itens() {
             <CardItem
               imagem="https://cdn.pixabay.com/photo/2018/01/05/04/27/object-3062127_1280.jpg"
               titulo="Flores"
-              desc="Item decorativo"
+              desc="Decoração de mesa com flores de plástico, em bom estado."
               local="Fortaleza-CE"
               badge="Flores"
             />
             <CardItem
               imagem="https://cdn.pixabay.com/photo/2017/11/20/05/39/object-2964498_960_720.jpg"
               titulo="Bonecos Artesanais"
-              desc="Itens manuais decorativos"
+              desc="Itens manuais decorativos, feitos com carinho."
               local="Fortaleza-CE"
               badge="Decoração"
             />
             <CardItem
               imagem="https://cdn.pixabay.com/photo/2017/08/07/23/55/still-2609350_1280.jpg"
               titulo="Relógio"
-              desc="Item usado"
+              desc="Possui configuração de alarme e voz anunciando a hora."
               local="Fortaleza-CE"
               badge="utilitários"
             />
             <CardItem
               imagem="https://cdn.pixabay.com/photo/2017/08/07/20/39/technology-2607623_1280.jpg"
               titulo="Fones de ouvido"
-              desc="Item novo"
+              desc="Item usado por 2 meses, funciona perfeitamente."
               local="Fortaleza-CE"
               badge="Acessórios"
             />
