@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import "./Detalhes.css";
+import { MessageCircleMoreIcon } from "lucide-react";
 
 import img1 from "../../assets/batman.png";
 import img2 from "../../assets/capacete.png";
@@ -69,26 +70,36 @@ export default function Detalhes() {
       badge: "Acessórios",
     },
   ];
-  
+
   const item = itens.find((i) => i.id === id);
 
   return (
-    <div>
+    <div className="page-wrapper">
       <NavBar />
-      <div className="detalhes-container">
-        {item ? (
-          <>
-            <img src={item.imagem} alt={item.titulo} className="detalhes-imagem" />
-            <div className="detalhes-info">
-              <h2>{item.titulo}</h2>
-              <p className="detalhes-desc">{item.desc}</p>
-              <p className="detalhes-local">📍 {item.local}</p>
-              <span className="detalhes-badge">{item.badge}</span>
-            </div>
-          </>
-        ) : (
-          <p>Item não encontrado!</p>
-        )}
+      <div className="content-wrapper">
+        <div className="detalhes-container">
+          {item ? (
+            <>
+              <img
+                src={item.imagem}
+                alt={item.titulo}
+                className="detalhes-imagem"
+              />
+              <div className="detalhes-info">
+                <h2>{item.titulo}</h2>
+                <p className="detalhes-desc">{item.desc}</p>
+                <p className="detalhes-local">📍 {item.local}</p>
+                <span className="detalhes-badge">{item.badge}</span>
+
+                <button className="detalhes-botao">
+                  <MessageCircleMoreIcon size={20} /> Abrir chat!
+                </button>
+              </div>
+            </>
+          ) : (
+            <p>Item não encontrado!</p>
+          )}
+        </div>
       </div>
       <Footer />
     </div>
