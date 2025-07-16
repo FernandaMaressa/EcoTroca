@@ -56,6 +56,7 @@ export default function Home() {
         <h2>Itens Recentes</h2>
         <div className="cards">
           <CardItem
+            id="1"
             imagem={img1}
             titulo="Boneco"
             desc="Boneco do Batman em bom estado."
@@ -63,6 +64,7 @@ export default function Home() {
             badge="Brinquedo"
           />
           <CardItem
+            id="2"
             imagem={img2}
             titulo="Capacete"
             desc="Seminovo disponível para troca"
@@ -70,6 +72,7 @@ export default function Home() {
             badge="Acesórios"
           />
           <CardItem
+            id="3"
             imagem={img3}
             titulo="Carro Batman"
             desc="Carrinho de coleção do Batman"
