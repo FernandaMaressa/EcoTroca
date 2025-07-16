@@ -44,7 +44,7 @@ export default function Perfil() {
               <h4>Boneco Batman</h4>
               <p>Meu filho ganhou dois iguais.</p>
               <span className="tag">Brinquedos</span>
-              <p className="local">📍Iguatu - CE</p>
+              <p className="local">📍Acopiara - CE</p>
               <div className="item-buttons">
                 <button>Editar</button>
                 <button className="remover">Remover</button>
