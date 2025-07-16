@@ -1,668 +1,683 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    -webkit-text-size-adjust: 100%;
-    font-feature-settings: normal;
-    font-variation-settings: normal;
-    -webkit-tap-highlight-color: transparent;
-    line-height: 1.5;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1.5;
 }
-
 
 .sobre-page {
-    display: flex;
-    flex-direction: column;
-    background-color: #f0f7fff2;
-    height: 100vh;
-    width: 100vw;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f7fff2;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
 }
 
-
 .sobre-mission {
-    border-color: hsl(var(--border));
-    padding-bottom: 5rem;
-    padding-top: 5rem;
-    background: #effef6;
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    --tw-gradient-to: #f0fdfa var(--tw-gradient-to-position);
-    --tw-gradient-from: #ecfdf5 var(--tw-gradient-from-position);
-    --tw-gradient-to: rgb(236 253 245 / 0) var(--tw-gradient-to-position);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-    background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  border-color: hsl(var(--border));
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+  background: #effef6;
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  --tw-gradient-to: #f0fdfa var(--tw-gradient-to-position);
+  --tw-gradient-from: #ecfdf5 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(236 253 245 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
 
 .text-mission {
-    display: block;
-    text-align: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1400px;
-    width: 100%;
-    border-color: hsl(var(--border));
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
+  display: block;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+  width: 100%;
+  border-color: hsl(var(--border));
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
 }
 
 .icone {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-    width: 3rem;
-    height: 3rem;
-    display: block;
-    border-color: hsl(var(--border));
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  width: 3rem;
+  height: 3rem;
+  display: block;
+  border-color: hsl(var(--border));
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
 }
 
 .circulo-icone {
-    padding: 1rem;
-    --tw-bg-opacity: 1;
-    background-color: rgb(16 185 129 / var(--tw-bg-opacity, 1));
-    border-radius: 9999px;
-    border-color: hsl(var(--border));
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    display: block;
+  padding: 1rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 185 129 / var(--tw-bg-opacity, 1));
+  border-radius: 9999px;
+  border-color: hsl(var(--border));
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  display: block;
 }
 
 .bloco-icone {
-    justify-content: center;
-    display: flex;
-    margin-bottom: 1.5rem;
-    border-color: hsl(var(--border));
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 1.5rem;
+  border-color: hsl(var(--border));
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
 }
 
 .text-mission h1 {
-    font-size: 3rem;
-    line-height: 1;
-    --tw-text-opacity: 1;
-    color: rgb(17 24 39 / var(--tw-text-opacity, 1));
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    border-color: hsl(var(--border));
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    display: block;
-    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
-    font-weight: bold;
+  font-size: 3rem;
+  line-height: 1;
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity, 1));
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  border-color: hsl(var(--border));
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  display: block;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  font-weight: bold;
 }
 
 .text-mission p {
-    --tw-text-opacity: 1;
-    color: rgb(75 85 99 / var(--tw-text-opacity, 1));
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    max-width: 48rem;
-    margin-left: auto;
-    margin-right: auto;
-    border-color: hsl(var(--border));
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    display: block;
-    margin-bottom: 0;
-    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
-
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: hsl(var(--border));
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  display: block;
+  margin-bottom: 0;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }
 
 .icone-card-1 svg {
-    --tw-text-opacity: 1;
-    color: rgb(5 150 105 / var(--tw-text-opacity, 1));
-    width: 2rem;
-    height: 2rem;
-    display: block;
-    border-color: hsl(var(--border));
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
+  --tw-text-opacity: 1;
+  color: rgb(5 150 105 / var(--tw-text-opacity, 1));
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  border-color: hsl(var(--border));
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
 }
 
 .icone-card-1 {
-    padding: 1rem;
-    --tw-bg-opacity: 1;
-    background-color: rgb(209 250 229 / var(--tw-bg-opacity, 1));
-    border-radius: 9999px;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 4rem;
-    display: flex;
-    margin-bottom: 1.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    border-color: hsl(var(--border));
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
+  padding: 1rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 250 229 / var(--tw-bg-opacity, 1));
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: hsl(var(--border));
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
 }
 
 .bloco-card-1 {
-    padding: 2rem;
-    border-color: hsl(var(--border));
+  padding: 2rem;
+  border-color: hsl(var(--border));
 }
 
 .bloco-card-1 h3 {
-    font-weight: 600;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    border-color: hsl(var(--border));
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  border-color: hsl(var(--border));
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
 }
 
 .bloco-card-1 p {
-    --tw-text-opacity: 1;
-    color: rgb(75 85 99 / var(--tw-text-opacity, 1));
-    margin: 0;
-    border-color: hsl(var(--border));
-    font-size: 1rem;
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    display: block;
-    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+  margin: 0;
+  border-color: hsl(var(--border));
+  font-size: 1rem;
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  display: block;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 .card-1 {
-    --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.314);
-    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    color: hsl(var(--card-foreground));
-    text-align: center;
-    border-color: hsl(143, 85%, 96%);
-    border-radius: var(--radius);
-    display: block;
-    border-width: 1px;
-    box-sizing: border-box;
-    border-style: solid;
-    background-color: #ffffff
+  --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.314);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  color: hsl(var(--card-foreground));
+  text-align: center;
+  border-color: hsl(143, 85%, 96%);
+  border-radius: var(--radius);
+  display: block;
+  border-width: 1px;
+  box-sizing: border-box;
+  border-style: solid;
+  background-color: #ffffff;
 }
 
 .icone-card-2 svg {
-    --tw-text-opacity: 1;
-    color: rgb(5 150 105 / var(--tw-text-opacity, 1));
-    width: 2rem;
-    height: 2rem;
-    display: block;
-    border-color: hsl(var(--border));
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
+  --tw-text-opacity: 1;
+  color: rgb(5 150 105 / var(--tw-text-opacity, 1));
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  border-color: hsl(var(--border));
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
 }
 
 .icone-card-2 {
-    padding: 1rem;
-    --tw-bg-opacity: 1;
-    background-color: rgb(209 250 229 / var(--tw-bg-opacity, 1));
-    border-radius: 9999px;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 4rem;
-    display: flex;
-    margin-bottom: 1.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    border-color: hsl(var(--border));
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
+  padding: 1rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 250 229 / var(--tw-bg-opacity, 1));
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: hsl(var(--border));
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
 }
 
 .bloco-card-2 {
-    padding: 2rem;
-    border-color: hsl(var(--border));
+  padding: 2rem;
+  border-color: hsl(var(--border));
 }
 
 .bloco-card-2 h3 {
-    font-weight: 600;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    border-color: hsl(var(--border));
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  border-color: hsl(var(--border));
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
 }
 
 .bloco-card-2 p {
-    --tw-text-opacity: 1;
-    color: rgb(75 85 99 / var(--tw-text-opacity, 1));
-    margin: 0;
-    border-color: hsl(var(--border));
-    font-size: 1rem;
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    display: block;
-    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+  margin: 0;
+  border-color: hsl(var(--border));
+  font-size: 1rem;
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  display: block;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 .card-2 {
-    --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.314);
-    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    color: hsl(var(--card-foreground));
-    text-align: center;
-    border-color: hsl(143, 85%, 96%);
-    border-radius: var(--radius);
-    display: block;
-    border-width: 1px;
-    box-sizing: border-box;
-    border-style: solid;
-    background-color: #ffffff
+  --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.314);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  color: hsl(var(--card-foreground));
+  text-align: center;
+  border-color: hsl(143, 85%, 96%);
+  border-radius: var(--radius);
+  display: block;
+  border-width: 1px;
+  box-sizing: border-box;
+  border-style: solid;
+  background-color: #ffffff;
 }
 
 .icone-card-3 svg {
-    --tw-text-opacity: 1;
-    color: rgb(5 150 105 / var(--tw-text-opacity, 1));
-    width: 2rem;
-    height: 2rem;
-    display: block;
-    border-color: hsl(var(--border));
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
+  --tw-text-opacity: 1;
+  color: rgb(5 150 105 / var(--tw-text-opacity, 1));
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  border-color: hsl(var(--border));
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
 }
 
 .icone-card-3 {
-    padding: 1rem;
-    --tw-bg-opacity: 1;
-    background-color: rgb(209 250 229 / var(--tw-bg-opacity, 1));
-    border-radius: 9999px;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 4rem;
-    display: flex;
-    margin-bottom: 1.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    border-color: hsl(var(--border));
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
+  padding: 1rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 250 229 / var(--tw-bg-opacity, 1));
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: hsl(var(--border));
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
 }
 
 .bloco-card-3 {
-    padding: 2rem;
-    border-color: hsl(var(--border));
+  padding: 2rem;
+  border-color: hsl(var(--border));
 }
 
 .bloco-card-3 h3 {
-    font-weight: 600;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-    border-color: hsl(var(--border));
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  border-color: hsl(var(--border));
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
 }
 
 .bloco-card-3 p {
-    --tw-text-opacity: 1;
-    color: rgb(75 85 99 / var(--tw-text-opacity, 1));
-    margin: 0;
-    border-color: hsl(var(--border));
-    font-size: 1rem;
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    display: block;
-    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+  margin: 0;
+  border-color: hsl(var(--border));
+  font-size: 1rem;
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  display: block;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 .card-3 {
-    --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.314);
-    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    color: hsl(var(--card-foreground));
-    text-align: center;
-    border-color: hsl(143, 85%, 96%);
-    border-radius: var(--radius);
-    display: block;
-    border-width: 1px;
-    box-sizing: border-box;
-    border-style: solid;
-    background-color: #ffffff
+  --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.314);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  color: hsl(var(--card-foreground));
+  text-align: center;
+  border-color: hsl(143, 85%, 96%);
+  border-radius: var(--radius);
+  display: block;
+  border-width: 1px;
+  box-sizing: border-box;
+  border-style: solid;
+  background-color: #ffffff;
 }
 
 .grid-valores {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
-    display: grid;
-    border-color: hsl(var(--border));
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  display: grid;
+  border-color: hsl(var(--border));
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
 }
 
 .bloco-valores h2 {
-    --tw-text-opacity: 1;
-    color: rgb(17 24 39 / var(--tw-text-opacity, 1));
-    font-weight: 700;
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    text-align: center;
-    margin-bottom: 3rem;
-    border-color: hsl(var(--border));
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
-    display: block;
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity, 1));
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  border-color: hsl(var(--border));
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  display: block;
 }
 
 .bloco-valores {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1400px;
-    width: 100%;
-    border-color: hsl(var(--border));
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    display: block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+  width: 100%;
+  border-color: hsl(var(--border));
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  display: block;
 }
 
 .sobre-valores {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    border-color: hsl(var(--border));
-    box-sizing: border-box;
-    border-width: 0; 
-    border-style: solid;
-    display: block;
-    --tw-bg-opacity: 1;
-    background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  border-color: hsl(var(--border));
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  display: block;
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
 }
 
 .sobre-historia {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-    border-color: hsl(143, 85%, 96%);
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    display: block;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+  border-color: hsl(143, 85%, 96%);
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  /* display: block; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bloco-historia {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1400px;
-    width: 100%;
-    border-color: hsl(143, 85%, 96%);
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    display: block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+  width: 90%;
+  border-color: hsl(143, 85%, 96%);
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  display: block;
 }
 
 .bloco-texto-historia {
-    max-width: 56rem;
-    margin-left: auto;
-    margin-right: auto;
-    border-color: hsl(143, 85%, 96%);
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    display: block;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: hsl(143, 85%, 96%);
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  display: block;
 }
 
 .bloco-texto-historia h2 {
-    --tw-text-opacity: 1;
-    color: rgb(17 24 39 / var(--tw-text-opacity, 1));
-    font-weight: 700;
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    margin-bottom: 2rem;
-    margin-bottom: 2rem;
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    display: block;
-    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity, 1));
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  margin-bottom: 2rem;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  display: block;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }
 
 .texto-historia {
-    --tw-text-opacity: 1;
-    color: rgb(75 85 99 / var(--tw-text-opacity, 1));
-    border-color: hsl(143, 85%, 96%);
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    display: block;
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+  border-color: hsl(143, 85%, 96%);
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  display: block;
 }
 
 .texto-historia p {
-    margin-bottom: 1.5rem;
-    border-color: hsl(143, 85%, 96%);
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    display: block;
-    font-size: 1rem;
-    font-weight: 400;
-    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  margin-bottom: 1.5rem;
+  border-color: hsl(143, 85%, 96%);
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }
 
 .sobre-impacto {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    --tw-bg-opacity: 1;
-    background-color: rgb(5 150 105 / var(--tw-bg-opacity, 1));
-    border-color: hsl(143, 85%, 96%);
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    display: block;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  --tw-bg-opacity: 1;
+  background-color: #81e4be;
+  /* background: #effef6; */
+  border-color: hsl(143, 85%, 96%);
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  display: block;
 }
 
 .bloco-impacto {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1400px;
-    width: 100%;
-    border-color: hsl(143, 85%, 96%);
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+  width: 100%;
+  border-color: hsl(143, 85%, 96%);
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }
 
 .bloco-impacto h2 {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-    font-weight: 700;
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    text-align: center;
-    margin-bottom: 3rem;
-    border-color: hsl(143, 85%, 96%);
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  border-color: hsl(143, 85%, 96%);
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }
 
 .grid-impacto {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    text-align: center;
-    gap: 2rem;
-    display: grid;
-    border-color: hsl(143, 85%, 96%);
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  text-align: center;
+  gap: 2rem;
+  display: grid;
+  border-color: hsl(143, 85%, 96%);
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
 }
 
 .dado-1 {
-    display: block;
-    border-color: hsl(143, 85%, 96%);
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
+  display: block;
+  border-color: hsl(143, 85%, 96%);
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
 }
 
 .dado-1-numero {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-    font-weight: 700;
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-    margin-bottom: .5rem;
-    border-color: hsl(143, 85%, 96%);
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    display: block;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  margin-bottom: 0.5rem;
+  border-color: hsl(143, 85%, 96%);
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  display: block;
 }
 
 .dado-1-texto {
-    --tw-text-opacity: 1;
-    color: rgb(209 250 229 / var(--tw-text-opacity, 1));
-    border-color: hsl(143, 85%, 96%);
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    display: block;
+  --tw-text-opacity: 1;
+  color: rgb(209 250 229 / var(--tw-text-opacity, 1));
+  border-color: hsl(143, 85%, 96%);
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  display: block;
 }
 
 .dado-2 {
-    display: block;
-    border-color: hsl(143, 85%, 96%);
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
+  display: block;
+  border-color: hsl(143, 85%, 96%);
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
 }
 
 .dado-2-numero {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-    font-weight: 700;
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-    margin-bottom: .5rem;
-    border-color: hsl(143, 85%, 96%);
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    display: block;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  margin-bottom: 0.5rem;
+  border-color: hsl(143, 85%, 96%);
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  display: block;
 }
 
 .dado-2-texto {
-    --tw-text-opacity: 1;
-    color: rgb(209 250 229 / var(--tw-text-opacity, 1));
-    border-color: hsl(143, 85%, 96%);
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    display: block;
+  --tw-text-opacity: 1;
+  color: rgb(209 250 229 / var(--tw-text-opacity, 1));
+  border-color: hsl(143, 85%, 96%);
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  display: block;
 }
 
 .dado-3 {
-    display: block;
-    border-color: hsl(143, 85%, 96%);
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
+  display: block;
+  border-color: hsl(143, 85%, 96%);
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
 }
 
 .dado-3-numero {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-    font-weight: 700;
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-    margin-bottom: .5rem;
-    border-color: hsl(143, 85%, 96%);
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    display: block;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  margin-bottom: 0.5rem;
+  border-color: hsl(143, 85%, 96%);
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  display: block;
 }
 
 .dado-3-texto {
-    --tw-text-opacity: 1;
-    color: rgb(209 250 229 / var(--tw-text-opacity, 1));
-    border-color: hsl(143, 85%, 96%);
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    display: block;
+  --tw-text-opacity: 1;
+  color: rgb(209 250 229 / var(--tw-text-opacity, 1));
+  border-color: hsl(143, 85%, 96%);
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  display: block;
 }
 
 .dado-4 {
-    display: block;
-    border-color: hsl(143, 85%, 96%);
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
+  display: block;
+  border-color: hsl(143, 85%, 96%);
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
 }
 
 .dado-4-numero {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-    font-weight: 700;
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-    margin-bottom: .5rem;
-    border-color: hsl(143, 85%, 96%);
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    display: block;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  margin-bottom: 0.5rem;
+  border-color: hsl(143, 85%, 96%);
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  display: block;
 }
 
 .dado-4-texto {
-    --tw-text-opacity: 1;
-    color: rgb(209 250 229 / var(--tw-text-opacity, 1));
-    border-color: hsl(143, 85%, 96%);
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-    display: block;
+  --tw-text-opacity: 1;
+  color: rgb(209 250 229 / var(--tw-text-opacity, 1));
+  border-color: hsl(143, 85%, 96%);
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  display: block;
 }
