@@ -69,5 +69,28 @@ export default function Detalhes() {
       badge: "Acessórios",
     },
   ];
+  
+  const item = itens.find((i) => i.id === id);
 
+  return (
+    <div>
+      <NavBar />
+      <div className="detalhes-container">
+        {item ? (
+          <>
+            <img src={item.imagem} alt={item.titulo} className="detalhes-imagem" />
+            <div className="detalhes-info">
+              <h2>{item.titulo}</h2>
+              <p className="detalhes-desc">{item.desc}</p>
+              <p className="detalhes-local">📍 {item.local}</p>
+              <span className="detalhes-badge">{item.badge}</span>
+            </div>
+          </>
+        ) : (
+          <p>Item não encontrado!</p>
+        )}
+      </div>
+      <Footer />
+    </div>
+  );
 }
