@@ -12,6 +12,7 @@ body {
 }
 
 .sobre-page {
+  font-family: "Quicksand";
   display: flex;
   flex-direction: column;
   background-color: #f0f7fff2;
@@ -87,6 +88,7 @@ body {
 }
 
 .text-mission h1 {
+  font-family: "Quicksand";
   font-size: 3rem;
   line-height: 1;
   --tw-text-opacity: 1;
@@ -98,8 +100,6 @@ body {
   border-width: 0;
   border-style: solid;
   display: block;
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
   font-weight: bold;
 }
 
@@ -117,8 +117,7 @@ body {
   border-style: solid;
   display: block;
   margin-bottom: 0;
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  font-family: "Quicksand";
 }
 
 .icone-card-1 svg {
@@ -167,6 +166,7 @@ body {
   box-sizing: border-box;
   border-width: 0;
   border-style: solid;
+  font-family: "Quicksand";
 }
 
 .bloco-card-1 p {
@@ -179,8 +179,7 @@ body {
   border-width: 0;
   border-style: solid;
   display: block;
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  font-family: "Quicksand";
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
@@ -261,8 +260,7 @@ body {
   border-width: 0;
   border-style: solid;
   display: block;
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+font-family: "Quicksand";
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
@@ -389,8 +387,7 @@ body {
   box-sizing: border-box;
   border-width: 0;
   border-style: solid;
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  font-family: "Quicksand";
   display: block;
 }
 
@@ -429,7 +426,6 @@ body {
   box-sizing: border-box;
   border-width: 0;
   border-style: solid;
-  /* display: block; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -472,8 +468,7 @@ body {
   border-width: 0;
   border-style: solid;
   display: block;
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  font-family: "Quicksand";
 }
 
 .texto-historia {
@@ -503,7 +498,7 @@ body {
   padding-top: 4rem;
   padding-bottom: 4rem;
   --tw-bg-opacity: 1;
-  background-color: #81e4be;
+  background-color: #8CC6B0;
   /* background: #effef6; */
   border-color: hsl(143, 85%, 96%);
   box-sizing: border-box;
@@ -523,8 +518,7 @@ body {
   box-sizing: border-box;
   border-width: 0;
   border-style: solid;
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  font-family: "Quicksand";
 }
 
 .bloco-impacto h2 {
@@ -539,8 +533,7 @@ body {
   box-sizing: border-box;
   border-width: 0;
   border-style: solid;
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  font-family: "Quicksand";
 }
 
 .grid-impacto {
