@@ -56,7 +56,7 @@ export default function Perfil() {
             <img src={capacete} alt="Item Capacete" />
             <div className="item-info">
               <h4>Capacete</h4>
-              <p>Usado por 1 ano e alguns meses.</p>
+              <p>Usado por 1 ano.</p>
               <span className="tag">Móveis</span>
               <p className="local">📍 Acopiara - CE</p>
               <div className="item-buttons">
