@@ -1,0 +1,39 @@
+.detalhes-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #f0faf5;
+  padding: 2rem;
+  border-radius: 8px;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.detalhes-imagem {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.detalhes-info {
+  flex: 1;
+}
+
+.detalhes-desc {
+  margin: 1rem 0;
+  color: #333;
+}
+
+.detalhes-local {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.detalhes-badge {
+  background: #d1fae5;
+  color: #48a488;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}

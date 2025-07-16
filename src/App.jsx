@@ -8,6 +8,7 @@ import Itens from "./pages/itens/Itens";
 import Sobre from "./pages/sobre/Sobre";
 import Anunciar from "./pages/anunciar/Anunciar";
 import EditarPerfil from "./pages/editarPerfil/EditarPerfil";
+import Detalhes from "./pages/detalhes/detalhes";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/itens" element={<Itens />} />
         <Route path="/anunciar" element={<Anunciar />} />
         <Route path="/editarperfil" element={<EditarPerfil />} />
+        <Route path="/detalhes/:id" element={<Detalhes />} />
       </Routes>
     </Router>
   );

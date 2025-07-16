@@ -1,8 +1,9 @@
 import React from "react";
 import { MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 import "./CardItem.css";
 
-export default function CardItem({ imagem, titulo, desc, local, badge }) {
+export default function CardItem({ id, imagem, titulo, desc, local, badge }) {
   return (
     <div className="card-item">
       <div className="card-image-container">
@@ -15,7 +16,9 @@ export default function CardItem({ imagem, titulo, desc, local, badge }) {
           <MapPin width={20} /> {local}
         </p>
         <p className="card-badge">{badge}</p>
-        <a href="" className="card-button">Ver detalhes</a>
+        <Link to={`/detalhes/${id}`} className="card-button">
+          Ver detalhes
+        </Link>
       </div>
     </div>
   );
