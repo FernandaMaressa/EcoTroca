@@ -6,6 +6,11 @@
   border-radius: 8px;
 }
 
+.perfil-grid{
+  display: flex;
+  justify-content: center;
+}
+
 .perfil-header {
   display: flex;
   align-items: center;
@@ -14,7 +19,9 @@
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
+
 
 .perfil-avatar {
   width: 80px;
@@ -33,10 +40,12 @@
 }
 
 .perfil-actions {
-  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   background: none;
   border: none;
-  color: #000;
+  color: #1c1c1c;
   cursor: pointer;
   font-size: 11pt;
   text-decoration: none;
@@ -59,6 +68,14 @@
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  margin: 40px;
+}
+
+.meus-itens2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
 }
 
 .item-card {
@@ -69,6 +86,9 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .item-card img {
@@ -113,4 +133,74 @@
 .item-buttons .remover {
   border-color: #ff5c5c;
   color: #ff5c5c;
+}
+
+@media (max-width: 1000px) {
+.meus-itens2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.item-card{
+   max-width: 330px;
+}
+
+.item-info p{
+ font-size: 0.8rem;
+}
+
+.item-info h4{
+ font-size: 0.9rem;
+}
+
+.item-buttons {
+  gap: 0.3rem;
+}
+
+.item-buttons button {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.7rem;
+}
+.item-buttons .remover {
+  font-size: 0.7rem;
+}
+}
+
+@media (max-width: 768px) {
+.perfil-avatar {
+  width: 50px;
+  height: 50px;
+}
+
+.perfil-header{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.meus-itens2 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.item-card{
+   max-width: 330px;
+}
+
+.item-info p{
+ font-size: 0.8rem;
+}
+
+.item-info h4{
+ font-size: 0.9rem;
+}
+
+.item-buttons {
+  gap: 0.3rem;
+}
+
+.item-buttons button {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.7rem;
+}
+.item-buttons .remover {
+  font-size: 0.7rem;
+}
 }
