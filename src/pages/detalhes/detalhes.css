@@ -78,3 +78,121 @@ body {
 .content-wrapper {
   flex: 1;
 }
+
+
+
+
+/*CSS do Chat*/
+
+/* Botão redondo flutuante para abrir/fechar o chat */
+.chat-toggle-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2db9ac; /* Cor verde-água */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Deixa o botão redondo */
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.chat-toggle-button:hover {
+  background-color: #24988e; /* Tom mais escuro ao passar o mouse */
+}
+
+/* Janela do chat - aparece acima do botão flutuante */
+.chat-widget {
+  position: fixed;
+  bottom: 90px; /* Um pouco acima do botão */
+  right: 20px;
+  width: 300px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+/* Cabeçalho do chat com título e ícone */
+.chat-header {
+  background-color: #2db9ac;
+  color: white;
+  padding: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Título do chat */
+.chat-title {
+  font-weight: bold;
+}
+
+/* Área de mensagens do chat */
+.chat-body {
+  padding: 10px;
+  height: 250px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo de cada mensagem */
+.chat-message {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Área inferior com input e botão de envio */
+.chat-input-area {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #eee;
+  gap: 8px;
+}
+
+/* Campo de texto onde o usuário digita */
+.chat-input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Botão de enviar */
+.chat-send-button {
+  background-color: #2db9ac;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.chat-send-button:hover {
+  background-color: #24988e;
+}
+
+.user-message {
+  background-color: #dcf8c6; /* verde claro tipo WhatsApp */
+  align-self: flex-end;
+  padding: 8px 12px;
+  border-radius: 16px;
+  max-width: 80%;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #333;
+}
