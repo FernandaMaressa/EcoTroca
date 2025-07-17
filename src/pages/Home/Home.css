@@ -14,7 +14,7 @@ p {
 .home-banner {
   text-align: center;
   padding: 4rem 2rem;
-  background: #e9f7f0;
+  background: #ECFDF5;
   display: flex;
   flex-direction: column;
 }
@@ -101,7 +101,7 @@ p {
 
 .itens-recentes {
   padding: 4rem 2rem;
-  background-color: #f9fafb;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;

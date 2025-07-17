@@ -10,8 +10,8 @@ export default function Sobre() {
     <div className="sobre-page">
       <NavBar />
       <section className="sobre-mission">
+        <img src={logo} alt="EcoTroca" width={70} />
         <div className="text-mission">
-           <img src={logo} alt="EcoTroca" width={70} />
           <h1>Nossa Missão</h1>
           <p>Acreditamos que cada item tem uma segunda chance de ser útil. A EcoTroca foi criada para conectar pessoas e promover um consumo mais consciente através de trocas sustentáveis.</p>
         </div> 
@@ -56,7 +56,7 @@ export default function Sobre() {
             <h2>Nossa História</h2>
             <div className="texto-historia">
               <p>A EcoTroca nasceu da observação de que muitos itens em perfeito estado de uso ficam guardados sem utilidade, enquanto outras pessoas procuram exatamente por esses mesmos itens. Percebemos uma oportunidade de conectar essas necessidades de forma sustentável.</p>
-              <p>Em 2023, decidimos criar uma plataforma que fosse além de apenas facilitar trocas. Queríamos construir uma comunidade consciente, onde cada transação contribui para um mundo mais sustentável e colaborativo.</p>
+              <p>Em 2025, decidimos criar uma plataforma que fosse além de apenas facilitar trocas. Queríamos construir uma comunidade consciente, onde cada transação contribui para um mundo mais sustentável e colaborativo.</p>
               <p>Hoje, a EcoTroca conecta milhares de pessoas em todo o Brasil, promovendo não apenas trocas de itens, mas também a troca de experiências e a construção de relações baseadas na confiança e no respeito mútuo.</p>
             </div>
           </div>
