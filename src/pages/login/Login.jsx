@@ -13,12 +13,11 @@ function Login() {
   } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    navigate("/home");
+    navigate("/");
   };
   return (
     <>
       <div className="loginP">
-        {/* <Link to={"/"} className='voltarInicio'>← Voltar ao início</Link> */}
         <div className="loginLogo">
           <img className="logo" src={logo} alt="Logo da EcoTroca" />
           <h1>EcoTroca</h1>

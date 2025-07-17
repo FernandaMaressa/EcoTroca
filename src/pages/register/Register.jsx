@@ -14,13 +14,12 @@ function Cadastro() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/");
+    navigate("/login");
   };
 
   return (
     <>
       <div className="registerP">
-        {/* <Link to={"/"} className='voltarInicio'>← Voltar ao início</Link> */}
         <div className="registerLogo">
           <img className="logo" src={logo} alt="Logo da EcoTroca" />
           <h1>EcoTroca</h1>

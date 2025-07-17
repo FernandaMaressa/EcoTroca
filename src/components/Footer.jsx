@@ -54,7 +54,7 @@ export default function Footer() {
             }}
           >
             <Link
-              to={"/home"}
+              to={"/"}
               style={{ color: "#fff", textDecoration: "none" }}
             >
               Início

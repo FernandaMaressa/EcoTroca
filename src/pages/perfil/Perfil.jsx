@@ -27,7 +27,7 @@ export default function Perfil() {
               <Link to={"/editarperfil"} className="perfil-actions">
                 Alterar Dados
               </Link>
-              <Link to={"/"} className="perfil-actions">
+              <Link to={"/login"} className="perfil-actions">
                 Sair
               </Link>
             </div>
