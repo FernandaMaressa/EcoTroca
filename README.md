@@ -65,3 +65,39 @@ Francisco Maciel de Oliveira Araújo
 -> Recursos Visuais
 - Adição de imagens demo para os itens.
 - Imagens com object-fit: cover para manter proporção.
+
+
+# Funcionalidades Desenvolvidas por Anna Clara Pinto Bessa
+
+-> Home
+- Ajuste completo da responsividade da página Home, incluindo cards iniciais, seção de itens recentes e demais elementos visuais.
+- Implementação da animação no botão "Buscar" da página Home.
+- Alteração do estilo visual de elementos da página Home.
+
+-> Login e Register
+- Criação completa do CSS personalizado das páginas de Login e Register.
+- Implementação de toda a responsividade das páginas de Login e Register, garantindo usabilidade em qualquer dispositivo.
+
+-> Anunciar
+- Correção do estilo visual de elementos da página Anunciar.
+- Correção da responsividade geral da página Anunciar e adição de responsividade específica para telas menores que 600px.
+
+-> Itens
+- Implementação de layout responsivo para os cards de itens da página Itens.
+- Implementação de responsividade para diferentes tamanhos de telas na página Itens.
+
+-> Perfil
+- Mudanças nas seções Meu Perfil e Meus Itens da página Perfil. 
+- Implementação de layout responsivo para telas de diferentes tamanhos na página Perfil.
+
+-> Sobre
+- Criação completa do novo estilo da página Sobre.
+- Implementação de layout responsivo na página Sobre.
+
+-> Componentes: NavBar
+- Separação de estilos da NavBar em arquivo externo (NavBar.css).
+- Adição de menu hambúrguer responsivo na NavBar, para melhorar a navegação em telas menores.
+- Ajustes de responsividade e CSS na NavBar.
+
+-> Recursos Visuais
+- Adição da logo do projeto em assets.
