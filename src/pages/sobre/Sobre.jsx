@@ -1,5 +1,6 @@
 import React from "react";
 import "./Sobre.css";
+import logo from "../../assets/logo.svg";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import { Bold } from "lucide-react";
@@ -10,11 +11,7 @@ export default function Sobre() {
       <NavBar />
       <section className="sobre-mission">
         <div className="text-mission">
-          <div className="bloco-icone">
-            <div className="circulo-icone">
-                <svg className="icone" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
-            </div>
-          </div>
+           <img src={logo} alt="EcoTroca" width={70} />
           <h1>Nossa Missão</h1>
           <p>Acreditamos que cada item tem uma segunda chance de ser útil. A EcoTroca foi criada para conectar pessoas e promover um consumo mais consciente através de trocas sustentáveis.</p>
         </div> 
