@@ -101,3 +101,19 @@ Francisco Maciel de Oliveira Araújo
 
 -> Recursos Visuais
 - Adição da logo do projeto em assets.
+
+# Funcionalidades Desenvolvidas por Maciel Araújo
+- Navegação e Layout
+- Correção de bugs na NavBar e implementação da navegação entre os menus.
+- Criação do Footer das páginas.
+
+-> Home
+- Ajustes na estilização das seções da página inicial.
+
+-> Itens
+- Criação da página de listagem de itens.
+- Estruturação dos cards de itens.
+
+-> Integração
+
+-> Conexão entre páginas via botões, garantindo a navegação funcional.
