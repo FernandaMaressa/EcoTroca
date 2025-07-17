@@ -117,3 +117,42 @@ Francisco Maciel de Oliveira Araújo
 -> Integração
 
 -> Conexão entre páginas via botões, garantindo a navegação funcional.
+
+# Funcionalidades Desenvolvidas por Gabriel Dias
+
+-> Login
+- Criação da estrutura da página de login com HTML.
+- Integração com botão de redirecionamento para registro.
+- Validação visual dos campos de entrada (email e senha).
+
+-> Register
+- Criação da estrutura da página de cadastro com HTML.
+- Inclusão de campos como nome, email, senha e confirmação.
+
+-> Detalhes
+- Criação da estrutura do chat lateral integrado à página de detalhes.
+- Estilização do chat com campos de entrada, área de mensagens e botão de envio.
+- Organização da comunicação com layout limpo.
+
+-> EditarPerfil
+- Estrutura da página de edição do perfil do usuário criada.
+- Inclusão de campos para alteração de nome, email e imagem de perfil.
+
+-> Integração de Telas
+- Ligação entre páginas de Login, Register, Perfil, Home e Itens.
+- Navegação fluida com React Router.
+
+-> Suporte Geral-
+- Suporte na organização de rotas e pastas.
+- Colaboração no teste de funcionalidades implementadas.
+
+# Funcionalidades Desenvolvidas por Bianca Leão
+
+-> Anunciar Item
+- Criação da estrutura completa da página
+- Estrutura do css
+- Correção de alguns bugs
+
+-> Sobre
+- Estrutura completa da página Sobre
+- Criação do css inicial da página
