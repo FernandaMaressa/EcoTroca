@@ -25,7 +25,7 @@ const addNovoUsuario = async (payload) => {
         const response = await api.post('/api/usuario/', payload);
         return response.data;
     } catch (error) {
-        console.error("Erro ao buscar dados:", error);
+        console.error("Erro ao adicionar novo usuário:", error);
         throw error;
     }
 };
@@ -35,7 +35,7 @@ const editarDadosUsuario = async (id, payload) => {
         const response = await api.put(`/api/usuario/${Number(id)}`, payload);
         return response.data;
     } catch (error) {
-        console.error("Erro ao buscar dados:", error);
+        console.error("Erro ao editar dados:", error);
         throw error;
     }
 };
@@ -45,7 +45,7 @@ const deletarUsuario = async (id) => {
         const response = await api.delete(`/api/usuario/${Number(id)}`);
         return response.data;
     } catch (error) {
-        console.error("Erro ao buscar dados:", error);
+        console.error("Erro ao deletar usuário:", error);
         throw error;
     }
 };
@@ -57,12 +57,3 @@ export default {
     editarDadosUsuario,
     deletarUsuario
 };
-
-
-/*
-router.get('/', getAllUsariosHandler);
-router.get('/:id', getUsuarioByIdHandler);
-router.post('/', createUsuarioHandler);
-router.put('/:id', updateUsuarioHandler);
-router.delete('/:id', deleteUsuarioHandler);
-*/
