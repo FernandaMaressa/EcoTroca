@@ -2,19 +2,42 @@ import "./Login.css";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import authService from "../../services/authService";
 import logo from "../../assets/logo.svg";
 
 function Login() {
   const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => {
-    console.log(data);
-    navigate("/");
+
+  const onSubmit = async (data) => {
+    try {
+      const payload = {
+        email: data.email,
+        senha: data.senha
+      };
+
+      const response = await authService.LoginUsuario(payload)
+
+      localStorage.setItem(import.meta.env.VITE_TOKEN_KEY, response.token);
+      localStorage.setItem(import.meta.env.VITE_USER_KEY, JSON.stringify(response.usario));
+
+      alert("Login realizado com sucesso!");
+      navigate("/");
+
+    } catch (error) {
+
+      console.error(erro);
+      alert("E-mail ou senha inválidos.");
+
+    }
+
   };
+
   return (
     <>
       <div className="loginP">

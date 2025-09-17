@@ -2,28 +2,24 @@ import "./Register.css";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.svg";
-import usuarioService from "../../services/usuarioService";
+//import usuarioService from "../../services/usuarioService";
+import authService from "../../services/authService";
 import localizacaoService from "../../services/localizacaoService";
 
 function Cadastro() {
   const navigate = useNavigate();
 
-  const [form, setForm] = useState({
-    nome: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-    state: '',
-    city: '',
-    dataNasc: ''
-  });
+  const [form, setForm] = useState({ nome: '', email: '', senha: '', confirmaSenha: '', estado: '', cidade: '', dataNasc: '' });
 
   const [estados, setEstados] = useState([]);
   const [cidades, setCidades] = useState([]);
+
   const [error, setError] = useState(null);
   const [saving, setSaving] = useState(false);
+
   const [imageBase64, setImageBase64] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
+
   useEffect(() => {
     const fetchEstados = async () => {
       try {
@@ -37,13 +33,13 @@ function Cadastro() {
   }, []);
 
   useEffect(() => {
-    if (form.state) {
+    if (form.estado) {
       const fetchCidades = async () => {
         try {
-          const cidadesData = await localizacaoService.buscarCidadesPorEstado(form.state);
+          const cidadesData = await localizacaoService.buscarCidadesPorEstado(form.estado);
           setCidades(cidadesData);
-        } catch (err) {
-          setError(`Falha ao carregar cidades para ${form.state}. Tente novamente.`);
+        } catch (error) {
+          setError(`Falha ao carregar cidades para ${form.estado}. Tente novamente.`);
           setCidades([]);
         }
       };
@@ -51,7 +47,7 @@ function Cadastro() {
     } else {
       setCidades([]);
     }
-  }, [form.state]);
+  }, [form.estado]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -66,8 +62,8 @@ function Cadastro() {
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setImagePreview(reader.result); 
-        setImageBase64(reader.result);  
+        setImagePreview(reader.result);
+        setImageBase64(reader.result);
       };
       reader.readAsDataURL(file);
     } else {
@@ -76,39 +72,44 @@ function Cadastro() {
     }
   };
 
-  async function handleSubmit(e) {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     setError(null);
 
-    if (!form.nome || !form.email || !form.password || !form.confirmPassword || !form.state || !form.city || !form.dataNasc) {
+    if (!form.nome || !form.email || !form.senha || !form.confirmaSenha || !form.estado || !form.cidade || !form.dataNasc) {
       return setError("Por favor, preencha todos os campos obrigatórios.");
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
       return setError("Por favor, insira um email válido.");
     }
-    if (form.password.length < 6) {
+    if (form.senha.length < 6) {
       return setError("A senha deve ter no mínimo 6 caracteres.");
     }
-    if (form.password !== form.confirmPassword) {
+    if (form.senha !== form.confirmaSenha) {
       return setError("As senhas não coincidem.");
     }
     if (form.dataNasc && !/^\d{4}-\d{2}-\d{2}$/.test(form.dataNasc)) {
-        return setError("Data de nascimento inválida. Use o formato YYYY-MM-DD.");
+      return setError("Data de nascimento inválida. Use o formato YYYY-MM-DD.");
     }
 
-    const payload = {
-      nome: form.nome,
-      email: form.email,
-      senha: form.password, 
-      cidade: form.city,
-      estado: form.state,
-      dataNasc: form.dataNasc,
-      imgPerfilBase64: imageBase64 
-    };
+
 
     try {
+
+      const payload = {
+        nome: form.nome,
+        email: form.email,
+        senha: form.senha,
+        cidade: form.cidade,
+        estado: form.estado,
+        dataNasc: form.dataNasc,
+        //imgPerfilBase64: imageBase64
+      };
+
+
       setSaving(true);
-      await usuarioService.addNovoUsuario(payload);
+      await authService.RegistrarUsuario(payload);
       alert("Usuário cadastrado com sucesso!");
       navigate("/login");
     } catch (error) {
@@ -167,8 +168,8 @@ function Cadastro() {
               <div>
                 <label>Estado</label>
                 <select
-                  name="state"
-                  value={form.state}
+                  name="estado"
+                  value={form.estado}
                   onChange={handleChange}
                   required
                 >
@@ -183,11 +184,11 @@ function Cadastro() {
               <div>
                 <label>Cidade</label>
                 <select
-                  name="city"
-                  value={form.city}
+                  name="cidade"
+                  value={form.cidade}
                   onChange={handleChange}
                   required
-                  disabled={!form.state}
+                  disabled={!form.estado}
                 >
                   <option value="">Selecione sua cidade</option>
                   {cidades.map((cidade) => (
@@ -202,8 +203,8 @@ function Cadastro() {
                 <input
                   type="password"
                   placeholder="*******"
-                  name="password"
-                  value={form.password}
+                  name="senha"
+                  value={form.senha}
                   onChange={handleChange}
                   required
                 />
@@ -213,8 +214,8 @@ function Cadastro() {
                 <input
                   type="password"
                   placeholder="*******"
-                  name="confirmPassword"
-                  value={form.confirmPassword}
+                  name="confirmaSenha"
+                  value={form.confirmaSenha}
                   onChange={handleChange}
                   required
                 />
