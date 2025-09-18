@@ -1,0 +1,90 @@
+.footer {
+  text-align: center;
+  padding: 1.7rem;
+  background: #43b3a0;
+  margin-top: 2rem;
+  color: #ffffff;
+}
+
+.footer-container {
+  display: flex;
+  gap: 7px;
+}
+
+.footer-brand {
+  display: flex;
+  flex: 0.7;
+  flex-direction: column;
+  gap: 7px;
+  text-align: left;
+}
+
+.footer-brand h2 {
+  color: #fff;
+}
+
+.footer-stars {
+  display: flex;
+}
+
+.footer-community {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-community h2 {
+  color: #fff;
+  margin-bottom: 7px;
+}
+
+.footer-community p {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  flex: 0.7;
+  text-align: center;
+}
+
+.footer-links h2 {
+  color: #fff;
+  margin-bottom: 7px;
+}
+
+.links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.links-list a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.links-list a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease-in-out;
+}
+
+.links-list a:hover::after {
+  width: 100%; 
+}
+
+.footer-copy {
+  color: #fff;
+  text-align: center;
+  margin-top: 1rem;
+}
