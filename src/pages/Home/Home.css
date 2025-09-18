@@ -97,12 +97,11 @@ p {
   align-items: center;
   color: #1C1C1C;
   width: 150px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+   transition: transform 0.2s ease;
 }
 
 .stat-card:hover {
-  transform: scale(1.05); 
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
+  transform: translateY(-5px);
 }
 
 .itens-recentes {
