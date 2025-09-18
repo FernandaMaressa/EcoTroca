@@ -9,6 +9,7 @@
 .footer-container {
   display: flex;
   gap: 7px;
+  flex-wrap: wrap;
 }
 
 .footer-brand {
@@ -87,4 +88,30 @@
   color: #fff;
   text-align: center;
   margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px; 
+  }
+
+  .footer-brand,
+  .footer-community,
+  .footer-links {
+    flex: 1;
+    text-align: center; 
+  }
+
+  .footer-brand {
+    align-items: center; 
+    text-align: center;
+  }
+
+  .footer-community p {
+    max-width: 90%; 
+    margin: 0 auto;
+  }
 }
