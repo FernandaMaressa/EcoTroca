@@ -42,6 +42,19 @@
   text-decoration: none;
 }
 
+.navbar-link {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar-link:hover {
+  color: #2db9ac;
+  text-decoration: underline;
+  text-decoration-color: #2db9ac;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+
 .navbar-button {
   background: none;
   border: 1px solid #48a488;
