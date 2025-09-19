@@ -14,7 +14,7 @@
 }
 
 .navbar-title {
-  color: #48a488;
+  color: #43b3a0;
   text-decoration: none;
   font-size: 1.5rem;
 }
@@ -48,22 +48,27 @@
 }
 
 .navbar-link:hover {
-  color: #2db9ac;
+  color: #43b3a0;
   text-decoration: underline;
-  text-decoration-color: #2db9ac;
+  text-decoration-color: #43b3a0;
   text-underline-offset: 3px;
   text-decoration-thickness: 2px;
 }
 
 .navbar-button {
   background: none;
-  border: 1px solid #48a488;
-  color: #48a488;
+  border: 1px solid #43b3a0;
+  color: #43b3a0;
   border-radius: 7px;
   padding: 0.3rem 0.6rem;
   cursor: pointer;
   font-size: 0.95rem;
   text-decoration: none;
+}
+
+.navbar-button:hover {
+  background: #43b3a0;
+  color: #fff;
 }
 
 .navbar-login {
@@ -87,16 +92,6 @@
   z-index: 30;
 }
 
-.navbar-link {
-  text-decoration: none;
-  transition: text-decoration-color 0.3s;
-}
-
-.navbar-link:hover {
-  text-decoration: underline;
-  text-decoration-color: #48a488;
-  text-underline-offset: 3px;
-}
 
 @media (max-width: 768px) {
   .navbar {

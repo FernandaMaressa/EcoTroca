@@ -34,12 +34,12 @@ export default function Itens() {
               titulo="Flores"
               desc="Decoração de mesa com flores de plástico, em bom estado."
               local="Fortaleza-CE"
-              badge="Flores"
+              badge="Decoração"
             />
             <CardItem
               id="5"
               imagem="https://cdn.pixabay.com/photo/2017/11/20/05/39/object-2964498_960_720.jpg"
-              titulo="Bonecos Artesanais"
+              titulo="Bonecos"
               desc="Itens manuais decorativos, feitos com carinho."
               local="Fortaleza-CE"
               badge="Decoração"
@@ -50,7 +50,7 @@ export default function Itens() {
               titulo="Relógio"
               desc="Possui configuração de alarme e voz anunciando a hora."
               local="Fortaleza-CE"
-              badge="utilitários"
+              badge="Decoração"
             />
             <CardItem
               id="7"
@@ -58,7 +58,7 @@ export default function Itens() {
               titulo="Fones de ouvido"
               desc="Item usado por 2 meses, funciona perfeitamente."
               local="Fortaleza-CE"
-              badge="Acessórios"
+              badge="Eletrônicos"
             />
             </div>
           </div>
