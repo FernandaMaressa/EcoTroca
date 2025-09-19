@@ -45,11 +45,19 @@
 }
 
 .card-button {
+  font-family: "Mulish";
+  font-size: 0.9rem;
   text-decoration: none;
   background-color: #43b3a0;
   color: #fff;
   padding: 0.5rem 1.7rem;
-  border-radius: 12px;
+  border-radius: 7px;
   cursor: pointer;
   display: inline-block;
+}
+
+.card-button:focus, 
+.card-button:active, 
+.card-button:hover {
+  background-color: #8CC6B0;
 }

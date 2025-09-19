@@ -61,7 +61,7 @@ export default function Home() {
             titulo="Boneco"
             desc="Boneco do Batman em bom estado."
             local="Fortaleza-CE"
-            badge="Brinquedo"
+            badge="Brinquedos"
           />
           <CardItem
             id="2"
@@ -69,7 +69,7 @@ export default function Home() {
             titulo="Capacete"
             desc="Seminovo disponível para troca"
             local="Fortaleza-CE"
-            badge="Acesórios"
+            badge="Acessórios"
           />
           <CardItem
             id="3"
@@ -77,7 +77,7 @@ export default function Home() {
             titulo="Carro Batman"
             desc="Carrinho de coleção do Batman"
             local="Iguatu-CE"
-            badge="Brinquedo"
+            badge="Brinquedos"
           />
         </div>
       </section>

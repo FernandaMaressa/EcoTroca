@@ -83,6 +83,19 @@
   text-decoration: none;
 }
 
+.navbar-login {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar-login:hover {
+  color: #43b3a0;
+  text-decoration: underline;
+  text-decoration-color: #43b3a0;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+
 .navbar-toggle {
   display: none;
   background: none;

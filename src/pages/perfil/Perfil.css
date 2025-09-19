@@ -51,6 +51,10 @@
   text-decoration: none;
 }
 
+.perfil-actions:hover {
+  color: #48a488;
+}
+
 .btn-cadastrar {
   text-decoration: none;
   display: block;
@@ -61,6 +65,10 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
+}
+
+.btn-cadastrar:hover {
+  background: #8CC6B0;
 }
 
 .meus-itens {
@@ -139,6 +147,11 @@
 .item-buttons .remover {
   border-color: #ff5c5c;
   color: #ff5c5c;
+}
+
+.item-buttons .remover:hover {
+  background: #ff5c5c;
+  color: #fff;
 }
 
 @media (max-width: 1000px) {
