@@ -7,7 +7,6 @@ body {
   max-width: 900px;
   margin: 2rem auto;
   background: #fff;
-  /* fundo branco */
   padding: 2rem;
   border-radius: 8px;
   display: flex;
@@ -80,7 +79,6 @@ body {
   background-color: #369c8b;
 }
 
-/* Permitir o footer empurrar para o fim da tela */
 .page-wrapper {
   min-height: 100vh;
   display: flex;
@@ -91,22 +89,14 @@ body {
   flex: 1;
 }
 
-
-
-
-/*CSS do Chat*/
-
-/* Botão redondo flutuante para abrir/fechar o chat */
 .chat-toggle-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background-color: #2db9ac;
-  /* Cor verde-água */
   color: white;
   border: none;
   border-radius: 50%;
-  /* Deixa o botão redondo */
   width: 56px;
   height: 56px;
   font-size: 24px;
@@ -117,14 +107,11 @@ body {
 
 .chat-toggle-button:hover {
   background-color: #24988e;
-  /* Tom mais escuro ao passar o mouse */
 }
 
-/* Janela do chat - aparece acima do botão flutuante */
 .chat-widget {
   position: fixed;
   bottom: 90px;
-  /* Um pouco acima do botão */
   right: 20px;
   width: 300px;
   background-color: white;
@@ -134,9 +121,9 @@ body {
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
+  z-index: 1001;
 }
 
-/* Cabeçalho do chat com título e ícone */
 .chat-header {
   background-color: #2db9ac;
   color: white;
@@ -148,12 +135,10 @@ body {
   gap: 8px;
 }
 
-/* Título do chat */
 .chat-title {
   font-weight: bold;
 }
 
-/* Área de mensagens do chat */
 .chat-body {
   padding: 10px;
   height: 250px;
@@ -163,14 +148,12 @@ body {
   flex-direction: column;
 }
 
-/* Estilo de cada mensagem */
 .chat-message {
   margin-bottom: 8px;
   font-size: 14px;
   color: #333;
 }
 
-/* Área inferior com input e botão de envio */
 .chat-input-area {
   display: flex;
   padding: 10px;
@@ -178,7 +161,6 @@ body {
   gap: 8px;
 }
 
-/* Campo de texto onde o usuário digita */
 .chat-input {
   flex: 1;
   padding: 6px 10px;
@@ -187,7 +169,6 @@ body {
   font-size: 14px;
 }
 
-/* Botão de enviar */
 .chat-send-button {
   background-color: #2db9ac;
   color: white;
@@ -204,7 +185,6 @@ body {
 
 .user-message {
   background-color: #dcf8c6;
-  /* verde claro tipo WhatsApp */
   align-self: flex-end;
   padding: 8px 12px;
   border-radius: 16px;
