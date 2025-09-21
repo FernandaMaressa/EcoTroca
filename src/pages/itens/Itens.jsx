@@ -1,10 +1,35 @@
+import { useEffect, useState } from "react";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
 import "./Itens.css";
 import { Search } from "lucide-react";
 import CardItem from "../../components/CardItem";
+import itemService from "../../services/itemService";
+
 
 export default function Itens() {
+
+  const [itens, setItens] = useState([]);
+  const [busca, setBusca] = useState("");
+
+  useEffect(() => {
+    const carregarItens = async () => {
+      try {
+        const dados = await itemService.buscarDados();
+        setItens(dados);
+      } catch (error) {
+        console.error("Erro ao carregar itens:", error);
+      }
+    };
+
+    carregarItens();
+  }, []);
+
+  const itensFiltrados = itens.filter((item) =>
+    item.nome.toLowerCase().includes(busca.toLowerCase())
+  );
+
+
   return (
     <section>
       <NavBar />
@@ -19,47 +44,27 @@ export default function Itens() {
             name="buscarItem"
             id="buscarItem"
             placeholder="O que você está procurando?"
+            value={busca}
+            onChange={(e) => setBusca(e.target.value)}
           />
           <Search />
         </div>
         <section className="section-card">
           <p>
-            <span>x</span> itens encontrados
+            <span>{itensFiltrados.length}</span> itens encontrados
           </p>
           <div className="container-cards">
             <div className="cards-itens">
+            {itensFiltrados.map((item) => (
             <CardItem
-              id="4"
-              imagem="https://cdn.pixabay.com/photo/2018/01/05/04/27/object-3062127_1280.jpg"
-              titulo="Flores"
-              desc="Decoração de mesa com flores de plástico, em bom estado."
-              local="Fortaleza-CE"
-              badge="Decoração"
-            />
-            <CardItem
-              id="5"
-              imagem="https://cdn.pixabay.com/photo/2017/11/20/05/39/object-2964498_960_720.jpg"
-              titulo="Bonecos"
-              desc="Itens manuais decorativos, feitos com carinho."
-              local="Fortaleza-CE"
-              badge="Decoração"
-            />
-            <CardItem
-              id="6"
-              imagem="https://cdn.pixabay.com/photo/2017/08/07/23/55/still-2609350_1280.jpg"
-              titulo="Relógio"
-              desc="Possui configuração de alarme e voz anunciando a hora."
-              local="Fortaleza-CE"
-              badge="Decoração"
-            />
-            <CardItem
-              id="7"
-              imagem="https://cdn.pixabay.com/photo/2017/08/07/20/39/technology-2607623_1280.jpg"
-              titulo="Fones de ouvido"
-              desc="Item usado por 2 meses, funciona perfeitamente."
-              local="Fortaleza-CE"
-              badge="Eletrônicos"
-            />
+              key={item.id}
+              id={item.id}
+              imagem={item.imagem}  
+              titulo={item.nome}
+              desc={item.descricao}
+              local={item.localizacao}
+              badge={item.categoria?.nome || "Sem categoria"}
+            />))}
             </div>
           </div>
         </section>
