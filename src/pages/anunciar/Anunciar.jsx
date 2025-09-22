@@ -82,7 +82,6 @@ export default function Anunciar() {
 
     const payload = {
       ...form,
-      // Passa a string Base64 para o backend
       imagemBase64: imageBase64,
     };
 
@@ -90,7 +89,7 @@ export default function Anunciar() {
       setSaving(true);
       await itemService.addNovoItem(payload);
       alert("Item cadastrado com sucesso!");
-      navigate("/"); // Redireciona para a página principal
+      navigate("/");
     } catch (error) {
       setError(error.response?.data?.error || "Falha ao cadastrar item. Tente novamente.");
     } finally {

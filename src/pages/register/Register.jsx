@@ -104,7 +104,7 @@ function Cadastro() {
         cidade: form.cidade,
         estado: form.estado,
         dataNasc: form.dataNasc,
-        //imgPerfilBase64: imageBase64
+        imgPerfilBase64: imageBase64,
       };
 
 
