@@ -62,7 +62,7 @@ export default function Itens() {
               imagem={item.imagem}  
               titulo={item.nome}
               desc={item.descricao}
-              local={item.localizacao}
+              local={`${item.cidade}, ${item.estado}`}
               badge={item.categoria?.nome || "Sem categoria"}
             />))}
             </div>

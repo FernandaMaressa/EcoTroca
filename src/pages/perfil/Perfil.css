@@ -6,7 +6,7 @@
   border-radius: 8px;
 }
 
-.perfil-grid{
+.perfil-grid {
   display: flex;
   justify-content: center;
 }
@@ -22,6 +22,12 @@
   width: 100%;
 }
 
+.perfil-foto {
+  width: 150px;
+  height: 150px;
+  padding-right: 10px;
+}
+
 
 .perfil-avatar {
   width: 80px;
@@ -30,7 +36,7 @@
   margin-right: 1rem;
 }
 
-.perfil-header > div:nth-child(2) {
+.perfil-header>div:nth-child(2) {
   flex: 1;
 }
 
@@ -155,71 +161,73 @@
 }
 
 @media (max-width: 1000px) {
-.meus-itens2 {
-  grid-template-columns: repeat(2, 1fr);
-}
+  .meus-itens2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-.item-card{
-   max-width: 330px;
-}
+  .item-card {
+    max-width: 330px;
+  }
 
-.item-info p{
- font-size: 0.8rem;
-}
+  .item-info p {
+    font-size: 0.8rem;
+  }
 
-.item-info h4{
- font-size: 0.9rem;
-}
+  .item-info h4 {
+    font-size: 0.9rem;
+  }
 
-.item-buttons {
-  gap: 0.3rem;
-}
+  .item-buttons {
+    gap: 0.3rem;
+  }
 
-.item-buttons button {
-  padding: 0.2rem 0.5rem;
-  font-size: 0.7rem;
-}
-.item-buttons .remover {
-  font-size: 0.7rem;
-}
+  .item-buttons button {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .item-buttons .remover {
+    font-size: 0.7rem;
+  }
 }
 
 @media (max-width: 768px) {
-.perfil-avatar {
-  width: 50px;
-  height: 50px;
-}
+  .perfil-avatar {
+    width: 50px;
+    height: 50px;
+  }
 
-.perfil-header{
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-}
+  .perfil-header {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 
-.meus-itens2 {
-  grid-template-columns: repeat(1, 1fr);
-}
+  .meus-itens2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
-.item-card{
-   max-width: 330px;
-}
+  .item-card {
+    max-width: 330px;
+  }
 
-.item-info p{
- font-size: 0.8rem;
-}
+  .item-info p {
+    font-size: 0.8rem;
+  }
 
-.item-info h4{
- font-size: 0.9rem;
-}
+  .item-info h4 {
+    font-size: 0.9rem;
+  }
 
-.item-buttons {
-  gap: 0.3rem;
-}
+  .item-buttons {
+    gap: 0.3rem;
+  }
 
-.item-buttons button {
-  padding: 0.2rem 0.5rem;
-  font-size: 0.7rem;
-}
-.item-buttons .remover {
-  font-size: 0.7rem;
-}
+  .item-buttons button {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .item-buttons .remover {
+    font-size: 0.7rem;
+  }
 }

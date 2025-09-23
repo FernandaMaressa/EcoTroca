@@ -27,7 +27,7 @@ function Login() {
       localStorage.setItem(import.meta.env.VITE_USER_KEY, JSON.stringify(response.usuario));
 
       alert("Login realizado com sucesso!");
-      navigate("/perfil");
+      navigate("/");
 
     } catch (error) {
 

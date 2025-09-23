@@ -108,6 +108,23 @@
   z-index: 30;
 }
 
+.login-link {
+  background: none;
+  border: none;
+  color: #1c1c1c; 
+  cursor: pointer;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.login-link:hover {
+  color: #43b3a0;
+  text-decoration: underline;
+  text-decoration-color: #43b3a0;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
 
 @media (max-width: 768px) {
   .navbar {

@@ -98,7 +98,6 @@ export default function Detalhes() {
               <MessageCircleMoreIcon size={20} /> Abrir chat!
             </button>
           </div>
-          <p>Item não encontrado!</p>
         </div>
       </div>
       {isOpen && (
