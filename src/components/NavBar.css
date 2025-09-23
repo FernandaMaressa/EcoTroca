@@ -40,6 +40,9 @@
   cursor: pointer;
   font-size: 0.95rem;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .navbar-link {

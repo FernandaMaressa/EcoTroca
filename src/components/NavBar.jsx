@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./NavBar.css";
 import logo from "../assets/logo.svg";
 import { Link } from "react-router-dom";
-import { Menu, X, User } from "lucide-react";
+import { Menu, X, User, LogIn } from "lucide-react";
 import usuarioService from "../services/usuarioService";
 
 export default function NavBar() {
@@ -87,13 +87,15 @@ export default function NavBar() {
         >
           + Anunciar Item
         </Link>
-        {
+        <div className="navbar-menu">
+          {
           isLoggedIn ? (
-            <Link to="/perfil" className="login-link"> <User width={20} /> {nomeUsuario}</Link>
+            <Link to="/perfil" className="login-link navbar-link"> <User width={20} /> {nomeUsuario}</Link>
           ) : (
-            <Link to="/login" className="login-link">Login</Link>
+            <Link to="/login" className="login-link navbar-link"> <LogIn width={20} /> Login</Link>
           )
-        }
+          }
+        </div>
       </nav>
     </header>
   );
