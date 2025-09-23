@@ -9,7 +9,7 @@ import localizacaoService from "../../services/localizacaoService";
 function Cadastro() {
   const navigate = useNavigate();
 
-  const [form, setForm] = useState({ nome: '', email: '', senha: '', confirmaSenha: '', estado: '', cidade: '', dataNasc: '' });
+  const [form, setForm] = useState({ nome: '', email: '', senha: '', confirmaSenha: '', estado: '', cidade: '', dataNasc: '', imgPerfil: '' });
 
   const [estados, setEstados] = useState([]);
   const [cidades, setCidades] = useState([]);
@@ -17,8 +17,6 @@ function Cadastro() {
   const [error, setError] = useState(null);
   const [saving, setSaving] = useState(false);
 
-  const [imageBase64, setImageBase64] = useState(null);
-  const [imagePreview, setImagePreview] = useState(null);
 
   useEffect(() => {
     const fetchEstados = async () => {
@@ -59,16 +57,12 @@ function Cadastro() {
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setForm({ ...form, imgPerfil: reader.result });
+    };
     if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setImagePreview(reader.result);
-        setImageBase64(reader.result);
-      };
       reader.readAsDataURL(file);
-    } else {
-      setImagePreview(null);
-      setImageBase64(null);
     }
   };
 
@@ -104,7 +98,7 @@ function Cadastro() {
         cidade: form.cidade,
         estado: form.estado,
         dataNasc: form.dataNasc,
-        imgPerfilBase64: imageBase64,
+        imgPerfil: form.imgPerfil
       };
 
 
@@ -227,16 +221,12 @@ function Cadastro() {
                 <input
                   id="file-upload"
                   type="file"
-                  name="image"
+                  name="imgPerfil"
                   accept="image/*"
                   onChange={handleImageChange}
                 />
-                {imagePreview && (
-                  <img
-                    src={imagePreview}
-                    alt="Pré-visualização da imagem"
-                    className="image-preview"
-                  />
+                {form.imgPerfil && (
+                  <img src={form.imgPerfil} alt="Preview" width="120" />
                 )}
               </div>
               <button className="cadastrobtt" type="submit" disabled={saving}>

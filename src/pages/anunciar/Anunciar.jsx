@@ -15,10 +15,9 @@ export default function Anunciar() {
     categoriaId: "",
     estado: "",
     cidade: "",
-    usuarioId: 20, // Exemplo de ID de usuário. No futuro, você obterá isso do contexto de autenticação.
+    imagem: "",
+    usuarioId: 20,
   });
-  const [imageBase64, setImageBase64] = useState(null);
-  const [imagePreview, setImagePreview] = useState(null);
   const [categorias, setCategorias] = useState([]);
   const [estados, setEstados] = useState([]);
   const [cidades, setCidades] = useState([]);
@@ -63,16 +62,12 @@ export default function Anunciar() {
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setForm({ ...form, imagem: reader.result });
+    };
     if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setImageBase64(reader.result);
-        setImagePreview(reader.result);
-      };
       reader.readAsDataURL(file);
-    } else {
-      setImageBase64(null);
-      setImagePreview(null);
     }
   };
 
@@ -82,7 +77,6 @@ export default function Anunciar() {
 
     const payload = {
       ...form,
-      imagemBase64: imageBase64,
     };
 
     try {
@@ -178,12 +172,8 @@ export default function Anunciar() {
                 accept="image/*"
                 onChange={handleImageChange}
               />
-              {imagePreview && (
-                <img
-                  src={imagePreview}
-                  alt="Pré-visualização da imagem"
-                  className="image-preview"
-                />
+              {form.imagem && (
+                <img src={form.imagem} alt="Preview" width="120" />
               )}
             </div>
             {error && <p className="error-message">{error}</p>}
