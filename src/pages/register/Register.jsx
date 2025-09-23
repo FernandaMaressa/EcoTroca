@@ -2,7 +2,6 @@ import "./Register.css";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.svg";
-//import usuarioService from "../../services/usuarioService";
 import authService from "../../services/authService";
 import localizacaoService from "../../services/localizacaoService";
 

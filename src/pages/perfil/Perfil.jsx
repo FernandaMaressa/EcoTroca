@@ -1,28 +1,63 @@
 import "./Perfil.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import batman from "../../assets/batman.png";
-import capacete from "../../assets/capacete.png";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
-import authService from "../../services/authService";
+import usuarioService from "../../services/usuarioService";
+import itemService from "../../services/itemService";
 
 export default function Perfil() {
-
-  const [usuario, setUsuario] = useState(null);
   const navigate = useNavigate();
 
+  const [perfil, setPerfil] = useState(null);
+  const [itens, setItens] = useState([]);
+  const [perfilLoading, setPerfilLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  const handleLogout = () => {
+    localStorage.removeItem(import.meta.env.VITE_TOKEN_KEY);
+    localStorage.removeItem(import.meta.env.VITE_USER_KEY);
+    navigate("/login");
+  };
+
   useEffect(() => {
-    const userData = localStorage.getItem("usuario");
-    if (userData) {
-      setUsuario(JSON.parse(userData));
-    } else {
-      navigate("/login");
-    }
+    const fetchPerfil = async () => {
+      const token = localStorage.getItem(import.meta.env.VITE_TOKEN_KEY);
+      const userDataString = localStorage.getItem(import.meta.env.VITE_USER_KEY);
+
+      if (!token || !userDataString) {
+        navigate("/login");
+        return;
+      }
+
+      try {
+        setPerfilLoading(true);
+
+        const usuario = JSON.parse(userDataString);
+
+        const dadosCompletos = await usuarioService.buscarDadosUsuario(usuario.id);
+        setPerfil(dadosCompletos);
+
+        const itensDoUsuario = await itemService.buscarDadosItemUsuario(usuario.id);
+        setItens(itensDoUsuario);
+      } catch (error) {
+        console.error("Erro ao carregar dados do perfil:", error);
+        setError("Falha ao carregar os dados do perfil.");
+        handleLogout();
+      } finally {
+        setPerfilLoading(false);
+      }
+    };
+
+    fetchPerfil();
   }, [navigate]);
 
-  if (!usuario) {
-    return <p>Carregando informações...</p>;
+  if (perfilLoading) {
+    return <p>Carregando perfil...</p>;
+  }
+
+  if (error) {
+    return <p>Erro: {error}</p>;
   }
 
   return (
@@ -34,18 +69,18 @@ export default function Perfil() {
           <div className="perfil-header">
             <img
               className="perfil-foto"
-              src={usuario.imgPerfilBase64 || "/default-avatar.png"} 
+              src={perfil?.imgPerfil || "/default-avatar.png"}
               alt="Foto de perfil" />
             <div>
-              <h2>{usuario.nome}</h2>
-              <p>{usuario.email}</p>
-              <p className="itens-cadastrados">{usuario.itens?.length || 0} Itens cadastrados</p>
+              <h2>{perfil?.nome}</h2>
+              <p>{perfil?.email}</p>
+              <p className="itens-cadastrados">{itens.length} Itens cadastrados</p>
             </div>
             <div className="perfil-actions">
               <Link to={"/editarperfil"} className="perfil-actions">
                 Alterar Dados
               </Link>
-              <Link to={"/login"} className="perfil-actions">
+              <Link to={"/login"} onClick={handleLogout} className="perfil-actions">
                 Sair
               </Link>
             </div>
@@ -58,22 +93,22 @@ export default function Perfil() {
         <h3>Meus Itens</h3>
         <div className="meus-itens">
           <div className="meus-itens2">
-            {usuario.itens && usuario.itens.length > 0 ? (
-              usuario.itens.map((item) => (
-              <div className="item-card" key={item.id}>
-                <img src={item.imagemBase64} alt={`Item ${item.nome}`} />
-                <div className="item-info">
-                  <h4>{item.nome}</h4>
-                  <p>{item.descricao}</p>
-                  <span className="tag">{item.categoria}</span>
-                  <p className="local">📍 {item.local}</p>
-                  <div className="item-buttons">
-                    <button>Editar</button>
-                    <button className="remover">Remover</button>
+            {itens && itens.length > 0 ? (
+              itens.map((item) => (
+                <div className="item-card" key={item.id}>
+                  <img src={item.imagem} alt={`Item ${item.nome}`} />
+                  <div className="item-info">
+                    <h4>{item.nome}</h4>
+                    <p>{item.descricao}</p>
+                    <span className="tag">{item.categoria.nome}</span>
+                    <p className="local">📍 {item.cidade}, {item.estado} </p>
+                    <div className="item-buttons">
+                      <button>Editar</button>
+                      <button className="remover">Remover</button>
+                    </div>
                   </div>
                 </div>
-              </div>
-              )) 
+              ))
             ) : (
               <p>Você ainda não cadastrou nenhum item.</p>
             )}

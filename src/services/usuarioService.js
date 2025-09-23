@@ -20,6 +20,16 @@ const buscarDadosUsuario = async (id) => {
     }
 };
 
+const buscarDadosDoPerfil = async () => {
+    try {
+        const response = await api.get('/api/usuario/perfil'); 
+        return response.data;
+    } catch (error) {
+        console.error("Erro ao buscar dados do perfil:", error);
+        throw error;
+    }
+};
+
 const addNovoUsuario = async (payload) => {
     try {
         const response = await api.post('/api/usuario/', payload);
@@ -55,5 +65,6 @@ export default {
     buscarDadosUsuario,
     addNovoUsuario,
     editarDadosUsuario,
-    deletarUsuario
+    deletarUsuario,
+    buscarDadosDoPerfil
 };

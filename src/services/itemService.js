@@ -10,6 +10,16 @@ const buscarDados = async () => {
     }
 };
 
+const buscarDadosItemUsuario = async (id) => {
+    try {
+        const response = await api.get(`/api/item/usuario/${Number(id)}`);
+        return response.data;
+    } catch (error) {
+        console.error("Erro ao buscar item:", error);
+        throw error;
+    }
+};
+
 const buscarDadosItem = async (id) => {
     try {
         const response = await api.get(`/api/item/${Number(id)}`);
@@ -55,5 +65,6 @@ export default {
     buscarDadosItem,
     addNovoItem,
     editarDadosItem,
-    deletarItem
+    deletarItem,
+    buscarDadosItemUsuario
 };

@@ -5,11 +5,41 @@ import NavBar from "../../components/NavBar";
 import CardItem from "../../components/CardItem";
 import Footer from "../../components/Footer";
 import { Leaf, RefreshCcw, UsersRound } from "lucide-react";
-import img1 from "../../assets/batman.png";
-import img2 from "../../assets/capacete.png";
-import img3 from "../../assets/CarroBatman.png";
+import { useState, useEffect } from "react";
+import itemService from "../../services/itemService"
 
 export default function Home() {
+  const [itensRecentes, setItensRecentes] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [nomeUsuario, setUserName] = useState(null);
+
+  useEffect(() => {
+
+    const userDataString = localStorage.getItem(import.meta.env.VITE_USER_KEY);
+    if (userDataString) {
+      const usuario = JSON.parse(userDataString);
+      setUserName(usuario.nome);
+    }
+  }, []);
+
+  useEffect(() => {
+    const carregarItensRecentes = async () => {
+      try {
+        setLoading(true);
+
+        const todosItens = await itemService.buscarDados();
+
+        const itensFiltrados = todosItens.slice(0, 3);
+        setItensRecentes(itensFiltrados);
+      } catch (error) {
+        console.error("Erro ao carregar itens recentes:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    carregarItensRecentes();
+  }, []);
+
   return (
     <div>
       <NavBar />
@@ -31,54 +61,45 @@ export default function Home() {
           <button>Buscar →</button>
         </div>
 
-      <div className="stats-container1">
-        <div className="stats-container2">
-          <div className="stat-card">
-            <UsersRound color="#43b3a0" />
-            <h3>1.2K+</h3>
-            <p>Usuários ativos</p>
+        <div className="stats-container1">
+          <div className="stats-container2">
+            <div className="stat-card">
+              <UsersRound color="#43b3a0" />
+              <h3>1.2K+</h3>
+              <p>Usuários ativos</p>
+            </div>
+            <div className="stat-card">
+              <RefreshCcw color="#43b3a0" />
+              <h3>3.5K+</h3>
+              <p>Trocas realizadas</p>
+            </div>
+            <div className="stat-card">
+              <Leaf color="#43b3a0" />
+              <h3>850+</h3>
+              <p>Itens disponíveis</p>
+            </div>
           </div>
-          <div className="stat-card">
-            <RefreshCcw color="#43b3a0" />
-            <h3>3.5K+</h3>
-            <p>Trocas realizadas</p>
-          </div>
-          <div className="stat-card">
-            <Leaf color="#43b3a0" />
-            <h3>850+</h3>
-            <p>Itens disponíveis</p>
-          </div>
-        </div>
         </div>
       </section>
 
       <section className="itens-recentes">
         <h2>Itens Recentes</h2>
         <div className="cards">
-          <CardItem
-            id="1"
-            imagem={img1}
-            titulo="Boneco"
-            desc="Boneco do Batman em bom estado."
-            local="Fortaleza-CE"
-            badge="Brinquedos"
-          />
-          <CardItem
-            id="2"
-            imagem={img2}
-            titulo="Capacete"
-            desc="Seminovo disponível para troca"
-            local="Fortaleza-CE"
-            badge="Acessórios"
-          />
-          <CardItem
-            id="3"
-            imagem={img3}
-            titulo="Carro Batman"
-            desc="Carrinho de coleção do Batman"
-            local="Iguatu-CE"
-            badge="Brinquedos"
-          />
+          {loading ? (
+            <p>Carregando itens...</p>
+          ) : (
+            itensRecentes.map((item) => (
+              <CardItem
+                key={item.id}
+                id={item.id}
+                imagem={item.imagem}
+                titulo={item.nome}
+                desc={item.descricao}
+                local={`${item.cidade}, ${item.estado}`}
+                badge={item.categoria.nome}
+              />
+            ))
+          )}
         </div>
       </section>
 

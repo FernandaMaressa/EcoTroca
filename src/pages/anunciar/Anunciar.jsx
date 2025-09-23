@@ -16,7 +16,7 @@ export default function Anunciar() {
     estado: "",
     cidade: "",
     imagem: "",
-    usuarioId: 20,
+    usuarioId: null,
   });
   const [categorias, setCategorias] = useState([]);
   const [estados, setEstados] = useState([]);
@@ -25,19 +25,33 @@ export default function Anunciar() {
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    const fetchDados = async () => {
+    const fetchInicialData = async () => {
+
+      const token = localStorage.getItem(import.meta.env.VITE_TOKEN_KEY);
+      const userDataString = localStorage.getItem(import.meta.env.VITE_USER_KEY);
+
+      if (!token || !userDataString) {
+        navigate("/login");
+        return;
+      }
+      
       try {
+       
+        const usuario = JSON.parse(userDataString);
+        setForm(prevForm => ({ ...prevForm, usuarioId: usuario.id }));
+
         const categoriasData = await categoriaService.buscarCategorias();
         setCategorias(categoriasData);
 
         const estadosData = await localizacaoService.buscarEstados();
         setEstados(estadosData);
       } catch (error) {
+        console.error("Erro ao carregar dados iniciais:", error);
         setError("Falha ao carregar dados. Tente novamente.");
       }
     };
-    fetchDados();
-  }, []);
+    fetchInicialData();
+  }, [navigate]);
 
   useEffect(() => {
     if (form.estado) {
@@ -45,7 +59,7 @@ export default function Anunciar() {
         try {
           const cidadesData = await localizacaoService.buscarCidadesPorEstado(form.estado);
           setCidades(cidadesData);
-        } catch (err) {
+        } catch (error) {
           setError(`Falha ao carregar cidades para ${form.estado}. Tente novamente.`);
           setCidades([]);
         }
@@ -75,6 +89,11 @@ export default function Anunciar() {
     e.preventDefault();
     setError(null);
 
+    if (!form.usuarioId) {
+        setError("Erro de autenticação. Tente fazer login novamente.");
+        return;
+    }
+
     const payload = {
       ...form,
     };
@@ -83,7 +102,7 @@ export default function Anunciar() {
       setSaving(true);
       await itemService.addNovoItem(payload);
       alert("Item cadastrado com sucesso!");
-      navigate("/");
+      navigate("/perfil");
     } catch (error) {
       setError(error.response?.data?.error || "Falha ao cadastrar item. Tente novamente.");
     } finally {

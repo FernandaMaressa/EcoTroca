@@ -24,14 +24,14 @@ function Login() {
       const response = await authService.LoginUsuario(payload)
 
       localStorage.setItem(import.meta.env.VITE_TOKEN_KEY, response.token);
-      localStorage.setItem(import.meta.env.VITE_USER_KEY, JSON.stringify(response.usario));
+      localStorage.setItem(import.meta.env.VITE_USER_KEY, JSON.stringify(response.usuario));
 
       alert("Login realizado com sucesso!");
-      navigate("/");
+      navigate("/perfil");
 
     } catch (error) {
 
-      console.error(erro);
+      console.error(error);
       alert("E-mail ou senha inválidos.");
 
     }

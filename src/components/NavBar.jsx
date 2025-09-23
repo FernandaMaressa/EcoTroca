@@ -1,11 +1,41 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./NavBar.css";
 import logo from "../assets/logo.svg";
 import { Link } from "react-router-dom";
 import { Menu, X, User } from "lucide-react";
+import usuarioService from "../services/usuarioService";
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [nomeUsuario, setNomeUsuario] = useState(null);
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const userDataString = localStorage.getItem(import.meta.env.VITE_USER_KEY);
+        const token = localStorage.getItem(import.meta.env.VITE_TOKEN_KEY);
+
+        if (userDataString && token) {
+          const usuarioLocalStorage = JSON.parse(userDataString);
+
+          const usuarioId = usuarioLocalStorage.id;
+          
+          const usuarioCompleto = await usuarioService.buscarDadosUsuario(usuarioId);
+          
+          if (usuarioCompleto && usuarioCompleto.nome) {
+            setNomeUsuario(usuarioCompleto.nome);
+          }
+        }
+      } catch (error) {
+        console.error("Erro ao carregar dados do usuário:", error);
+        setNomeUsuario(null);
+      }
+    };
+
+    fetchUserData();
+  }, []);
+
+  const isLoggedIn = !!nomeUsuario;
 
   return (
     <header className="navbar">
@@ -57,13 +87,13 @@ export default function NavBar() {
         >
           + Anunciar Item
         </Link>
-        <Link
-          to="/perfil"
-          className="navbar-login"
-          onClick={() => setMenuOpen(false)}
-        >
-          <User width={20} /> Perfil
-        </Link>
+        {
+          isLoggedIn ? (
+            <Link to="/perfil" className="login-link"> <User width={20} /> {nomeUsuario}</Link>
+          ) : (
+            <Link to="/login" className="login-link">Login</Link>
+          )
+        }
       </nav>
     </header>
   );
