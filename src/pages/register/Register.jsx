@@ -6,6 +6,7 @@ import authService from "../../services/authService";
 import localizacaoService from "../../services/localizacaoService";
 import usuarioService from "../../services/usuarioService";
 import { Upload } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const toInputDate = (value) => {
   if (!value) return "";
@@ -224,7 +225,9 @@ function Cadastro() {
             import.meta.env.VITE_USER_KEY,
             JSON.stringify({ ...usuarioLocal, ...atualizado })
           );
-        } catch {}
+        } catch (e) {
+          console.error("Falha ao carregar seus dados:", e);
+        }
 
         alert("Dados atualizados com sucesso!");
         navigate("/perfil");
@@ -242,7 +245,7 @@ function Cadastro() {
   };
 
   return (
-    <>
+    <div className="main">
       <div className="registerP">
         <div className="registerLogo">
           <img className="logo" src={logo} alt="Logo da EcoTroca" />
@@ -413,11 +416,15 @@ function Cadastro() {
                   ? "Salvar alterações"
                   : "Cadastrar"}
               </button>
+
+              <Link to={"/login"} className="btnBack">
+                Voltar
+              </Link>
             </form>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 export default Cadastro;

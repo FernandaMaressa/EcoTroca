@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 0;
+  padding: 20px;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
@@ -112,6 +112,23 @@ form input:focus {
   cursor: pointer;
   font-family: "Mulish";
   margin-top: 10px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.btnBack {
+  background-color: #43b3a0;
+  color: white;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Mulish";
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cadastrobtt:focus,
@@ -137,10 +154,11 @@ form input:focus {
 }
 
 .logo {
-  margin-top: 30px;
+  /* margin-top: 30px; */
   width: 15%;
-  margin-bottom: 30px;
-  margin-right: 10px;
+  /* margin-bottom: 30px; */
+  padding-bottom: 30px;
+  /* margin-right: 10px; */
 }
 
 .file-input-container {
