@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./Anunciar.css";
 import NavBar from "../../components/NavBar";
 import Footer from "../../components/Footer";
@@ -9,6 +9,10 @@ import categoriaService from "../../services/categoriaService";
 
 export default function Anunciar() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const editMode = location.state?.mode === "edit";
+  const itemToEdit = location.state?.item || null;
+
   const [form, setForm] = useState({
     nome: "",
     descricao: "",
@@ -26,7 +30,6 @@ export default function Anunciar() {
 
   useEffect(() => {
     const fetchInicialData = async () => {
-
       const token = localStorage.getItem(import.meta.env.VITE_TOKEN_KEY);
       const userDataString = localStorage.getItem(import.meta.env.VITE_USER_KEY);
 
@@ -34,24 +37,37 @@ export default function Anunciar() {
         navigate("/login");
         return;
       }
-      
+
       try {
-       
         const usuario = JSON.parse(userDataString);
-        setForm(prevForm => ({ ...prevForm, usuarioId: usuario.id }));
+        setForm((prev) => ({ ...prev, usuarioId: usuario.id })); // ← fix do spread
 
-        const categoriasData = await categoriaService.buscarCategorias();
-        setCategorias(categoriasData);
+        const [cats, ufs] = await Promise.all([
+          categoriaService.buscarCategorias(),
+          localizacaoService.buscarEstados(),
+        ]);
+        setCategorias(cats);
+        setEstados(ufs);
 
-        const estadosData = await localizacaoService.buscarEstados();
-        setEstados(estadosData);
+        // Prefill no modo edição
+        if (editMode && itemToEdit) {
+          setForm((prev) => ({
+            ...prev,
+            nome: itemToEdit.nome || "",
+            descricao: itemToEdit.descricao || "",
+            categoriaId: itemToEdit.categoria?.id || "",
+            estado: itemToEdit.estado || "",
+            cidade: itemToEdit.cidade || "",
+            imagem: itemToEdit.imagem || "",
+          }));
+        }
       } catch (error) {
         console.error("Erro ao carregar dados iniciais:", error);
         setError("Falha ao carregar dados. Tente novamente.");
       }
     };
     fetchInicialData();
-  }, [navigate]);
+  }, [navigate, editMode, itemToEdit]);
 
   useEffect(() => {
     if (form.estado) {
@@ -75,14 +91,12 @@ export default function Anunciar() {
   };
 
   const handleImageChange = (e) => {
-    const file = e.target.files[0];
+    const file = e.target.files?.[0];
     const reader = new FileReader();
     reader.onloadend = () => {
       setForm({ ...form, imagem: reader.result });
     };
-    if (file) {
-      reader.readAsDataURL(file);
-    }
+    if (file) reader.readAsDataURL(file);
   };
 
   const handleSubmit = async (e) => {
@@ -90,21 +104,25 @@ export default function Anunciar() {
     setError(null);
 
     if (!form.usuarioId) {
-        setError("Erro de autenticação. Tente fazer login novamente.");
-        return;
+      setError("Erro de autenticação. Tente fazer login novamente.");
+      return;
     }
-
-    const payload = {
-      ...form,
-    };
 
     try {
       setSaving(true);
-      await itemService.addNovoItem(payload);
-      alert("Item cadastrado com sucesso!");
+      if (editMode && itemToEdit?.id) {
+        await itemService.editarDadosItem(itemToEdit.id, form);
+        alert("Item atualizado com sucesso!");
+      } else {
+        await itemService.addNovoItem(form);
+        alert("Item cadastrado com sucesso!");
+      }
       navigate("/perfil");
     } catch (error) {
-      setError(error.response?.data?.error || "Falha ao cadastrar item. Tente novamente.");
+      setError(
+        error.response?.data?.error ||
+          (editMode ? "Falha ao atualizar item. Tente novamente." : "Falha ao cadastrar item. Tente novamente.")
+      );
     } finally {
       setSaving(false);
     }
@@ -115,10 +133,11 @@ export default function Anunciar() {
       <NavBar />
       <div className="anunciar-bg">
         <div className="anunciar-box">
-          <h1>Cadastrar Novo Item</h1>
+          <h1>{editMode ? "Editar Item" : "Cadastrar Novo Item"}</h1>
           <p className="subtitulo">
-            Adicione um item que você gostaria de trocar
+            {editMode ? "Atualize as informações do seu item" : "Adicione um item que você gostaria de trocar"}
           </p>
+
           <form onSubmit={handleSubmit}>
             <label>Nome do Item *</label>
             <input
@@ -129,6 +148,7 @@ export default function Anunciar() {
               placeholder="Ex: Televisão LG"
               required
             />
+
             <label>Descrição *</label>
             <textarea
               name="descricao"
@@ -137,6 +157,7 @@ export default function Anunciar() {
               placeholder="Descreva as condições, características, etc."
               required
             />
+
             <label>Categoria *</label>
             <select
               name="categoriaId"
@@ -151,6 +172,7 @@ export default function Anunciar() {
                 </option>
               ))}
             </select>
+
             <label>Estado</label>
             <select
               name="estado"
@@ -165,6 +187,7 @@ export default function Anunciar() {
                 </option>
               ))}
             </select>
+
             <label>Cidade</label>
             <select
               name="cidade"
@@ -180,9 +203,10 @@ export default function Anunciar() {
                 </option>
               ))}
             </select>
+
             <div className="file-input-container">
               <label htmlFor="file-upload" className="custom-file-upload">
-                Adicionar Foto do Item
+                {editMode ? "Atualizar Foto do Item" : "Adicionar Foto do Item"}
               </label>
               <input
                 id="file-upload"
@@ -191,15 +215,18 @@ export default function Anunciar() {
                 accept="image/*"
                 onChange={handleImageChange}
               />
-              {form.imagem && (
-                <img src={form.imagem} alt="Preview" width="120" />
-              )}
+              {form.imagem && <img src={form.imagem} alt="Preview" width="120" />}
             </div>
+
             {error && <p className="error-message">{error}</p>}
+
             <button type="submit" disabled={saving}>
-              {saving ? 'Cadastrando...' : 'Cadastrar Item'}
+              {saving
+                ? (editMode ? "Salvando..." : "Cadastrando...")
+                : (editMode ? "Salvar alterações" : "Cadastrar Item")}
             </button>
           </form>
+
           <div className="dicas-box">
             <h4>Dicas para um bom cadastro:</h4>
             <ul>
