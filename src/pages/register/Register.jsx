@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 import authService from "../../services/authService";
 import localizacaoService from "../../services/localizacaoService";
+import { Upload } from "lucide-react";
 
 function Cadastro() {
   const navigate = useNavigate();
@@ -243,6 +244,9 @@ function Cadastro() {
                   accept="image/*"
                   onChange={handleImageChange}
                 />
+                <label for="file-upload" id="upload">
+                  Selecionar <Upload />
+                </label>
                 {form.imgPerfil && (
                   <img src={form.imgPerfil} alt="Preview" width="120" />
                 )}

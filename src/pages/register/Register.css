@@ -75,6 +75,9 @@ h1 {
   margin-bottom: 20px;
   align-items: center;
 }
+form input:focus {
+  outline: #8cc6b0;
+}
 
 .registerInfo select {
   border: 1px solid #ccc;
@@ -138,6 +141,39 @@ h1 {
   width: 15%;
   margin-bottom: 30px;
   margin-right: 10px;
+}
+
+.file-input-container {
+  border: none;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  text-align: center;
+}
+.file-input-container input {
+  display: none;
+}
+
+#upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 1px;
+  background-color: rgba(238, 234, 234, 0.671);
+  color: #43b3a0;
+  width: 100%;
+  border-radius: 17px;
+  text-align: center;
+  margin: auto;
+  gap: 7px;
+  font-size: small;
+  margin-bottom: 20px;
+}
+#upload:hover {
+  cursor: pointer;
+  transition: all;
+  transition-duration: 500ms;
+  background-color: rgba(216, 211, 211, 0.671);
 }
 
 @media (max-width: 600px) {
