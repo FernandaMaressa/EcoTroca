@@ -8,14 +8,22 @@ import localizacaoService from "../../services/localizacaoService";
 function Cadastro() {
   const navigate = useNavigate();
 
-  const [form, setForm] = useState({ nome: '', email: '', senha: '', confirmaSenha: '', estado: '', cidade: '', dataNasc: '', imgPerfil: '' });
+  const [form, setForm] = useState({
+    nome: "",
+    email: "",
+    senha: "",
+    confirmaSenha: "",
+    estado: "",
+    cidade: "",
+    dataNasc: "",
+    imgPerfil: "",
+  });
 
   const [estados, setEstados] = useState([]);
   const [cidades, setCidades] = useState([]);
 
   const [error, setError] = useState(null);
   const [saving, setSaving] = useState(false);
-
 
   useEffect(() => {
     const fetchEstados = async () => {
@@ -33,10 +41,14 @@ function Cadastro() {
     if (form.estado) {
       const fetchCidades = async () => {
         try {
-          const cidadesData = await localizacaoService.buscarCidadesPorEstado(form.estado);
+          const cidadesData = await localizacaoService.buscarCidadesPorEstado(
+            form.estado
+          );
           setCidades(cidadesData);
         } catch (error) {
-          setError(`Falha ao carregar cidades para ${form.estado}. Tente novamente.`);
+          setError(
+            `Falha ao carregar cidades para ${form.estado}. Tente novamente.`
+          );
           setCidades([]);
         }
       };
@@ -48,9 +60,9 @@ function Cadastro() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm(prevState => ({
+    setForm((prevState) => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -70,7 +82,15 @@ function Cadastro() {
 
     setError(null);
 
-    if (!form.nome || !form.email || !form.senha || !form.confirmaSenha || !form.estado || !form.cidade || !form.dataNasc) {
+    if (
+      !form.nome ||
+      !form.email ||
+      !form.senha ||
+      !form.confirmaSenha ||
+      !form.estado ||
+      !form.cidade ||
+      !form.dataNasc
+    ) {
       return setError("Por favor, preencha todos os campos obrigatórios.");
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
@@ -86,10 +106,7 @@ function Cadastro() {
       return setError("Data de nascimento inválida. Use o formato YYYY-MM-DD.");
     }
 
-
-
     try {
-
       const payload = {
         nome: form.nome,
         email: form.email,
@@ -97,20 +114,22 @@ function Cadastro() {
         cidade: form.cidade,
         estado: form.estado,
         dataNasc: form.dataNasc,
-        imgPerfil: form.imgPerfil
+        imgPerfil: form.imgPerfil,
       };
-
 
       setSaving(true);
       await authService.RegistrarUsuario(payload);
       alert("Usuário cadastrado com sucesso!");
       navigate("/login");
     } catch (error) {
-      setError(error.response?.data?.error || 'Falha ao criar usuário. Tente novamente.');
+      setError(
+        error.response?.data?.error ||
+          "Falha ao criar usuário. Tente novamente."
+      );
     } finally {
       setSaving(false);
     }
-  }
+  };
 
   return (
     <>
@@ -229,7 +248,7 @@ function Cadastro() {
                 )}
               </div>
               <button className="cadastrobtt" type="submit" disabled={saving}>
-                {saving ? 'Cadastrando...' : 'Cadastrar'}
+                {saving ? "Cadastrando..." : "Cadastrar"}
               </button>
             </form>
           </div>

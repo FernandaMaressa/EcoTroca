@@ -65,6 +65,9 @@ html,
   font-family: "Quicksand";
   margin-bottom: 20px;
 }
+.loginForms input:focus {
+  outline: #8cc6b0;
+}
 
 .voltarInicio {
   text-decoration: none;
@@ -124,6 +127,10 @@ html,
   font-family: "Quicksand";
   color: #43b3a0;
   display: inline-flex;
+}
+
+#link-register {
+  color: #1f554c;
 }
 
 @media (max-width: 600px) {

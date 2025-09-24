@@ -18,24 +18,23 @@ function Login() {
     try {
       const payload = {
         email: data.email,
-        senha: data.senha
+        senha: data.senha,
       };
 
-      const response = await authService.LoginUsuario(payload)
+      const response = await authService.LoginUsuario(payload);
 
       localStorage.setItem(import.meta.env.VITE_TOKEN_KEY, response.token);
-      localStorage.setItem(import.meta.env.VITE_USER_KEY, JSON.stringify(response.usuario));
+      localStorage.setItem(
+        import.meta.env.VITE_USER_KEY,
+        JSON.stringify(response.usuario)
+      );
 
       alert("Login realizado com sucesso!");
       navigate("/");
-
     } catch (error) {
-
       console.error(error);
       alert("E-mail ou senha inválidos.");
-
     }
-
   };
 
   return (
@@ -74,7 +73,10 @@ function Login() {
                 Entrar
               </button>
               <p>
-                Não tem uma conta? <Link to={"/register"}>Cadastre-se</Link>
+                Não tem uma conta?{" "}
+                <Link to={"/register"} id="link-register">
+                  Cadastre-se
+                </Link>
               </p>
             </form>
           </div>

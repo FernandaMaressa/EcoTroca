@@ -2,9 +2,8 @@
   background-color: #ffffff;
 }
 
-
 .sobre-mission {
-  background-color: #ECFDF5;
+  background-color: #ecfdf5;
   text-align: center;
   padding: 8em;
 }
@@ -49,7 +48,7 @@
   font-family: "Quicksand";
 }
 
-.grid-valores>div {
+.grid-valores > div {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -60,7 +59,7 @@
   transition: transform 0.2s ease;
 }
 
-.grid-valores>div:hover {
+.grid-valores > div:hover {
   transform: translateY(-5px);
 }
 
@@ -141,7 +140,7 @@
   gap: 2rem;
 }
 
-.grid-impacto>div {
+.grid-impacto > div {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   padding: 2rem 1rem;
@@ -150,7 +149,7 @@
   text-align: center;
 }
 
-.grid-impacto div:hover {
+.grid-impacto > div:hover {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
@@ -168,7 +167,6 @@
   font-size: 1rem;
   color: #e0f8f2;
 }
-
 
 @media (max-width: 768px) {
   .grid-valores {

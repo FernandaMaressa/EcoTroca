@@ -1,20 +1,20 @@
 h2 {
   font-family: "Quicksand";
   margin-bottom: 1px;
-  color: #1C1C1C;
+  color: #1c1c1c;
 }
 
 p {
   font-family: "Quicksand";
   margin-bottom: 40px;
-  color: #1C1C1C;
+  color: #1c1c1c;
   font-size: 1em;
 }
 
 .home-banner {
   text-align: center;
   padding: 4rem 2rem;
-  background: #ECFDF5;
+  background: #ecfdf5;
   display: flex;
   flex-direction: column;
 }
@@ -28,7 +28,7 @@ p {
 }
 
 .home-banner h1 {
-  color: #1C1C1C;
+  color: #1c1c1c;
   font-size: 3rem;
 }
 
@@ -50,6 +50,9 @@ p {
   font-family: "Mulish";
   margin: 10px;
 }
+.home-banner .search-box input:focus {
+  outline: none;
+}
 
 .home-banner .search-box button {
   color: #fff;
@@ -60,12 +63,15 @@ p {
   font-family: "Mulish";
   margin: 10px;
 }
-.home-banner .search-box button:focus, 
-.home-banner .search-box button:active, 
+.home-banner .search-box button:focus,
+.home-banner .search-box button:active,
 .home-banner .search-box button:hover {
-   background-color: #8CC6B0;
-    color: #ffffff;
-    border-radius: 6px;
+  background-color: #8cc6b0;
+  color: #ffffff;
+  border-radius: 6px;
+  transition: all;
+  transition-duration: 500ms;
+  cursor: pointer;
 }
 
 .stats-container1 {
@@ -95,9 +101,9 @@ p {
   gap: 7px;
   justify-content: center;
   align-items: center;
-  color: #1C1C1C;
+  color: #1c1c1c;
   width: 150px;
-   transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .stat-card:hover {
@@ -111,7 +117,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #1C1C1C;
+  color: #1c1c1c;
 }
 
 .itens-recentes .cards {
@@ -127,7 +133,7 @@ p {
   padding: 4rem 2rem;
   background: #fff;
   text-align: center;
-  color: #1C1C1C;
+  color: #1c1c1c;
 }
 
 .como-funciona .steps {
@@ -136,7 +142,7 @@ p {
   justify-content: center;
   gap: 4rem;
   margin-top: 3rem;
-  color: #1C1C1C;
+  color: #1c1c1c;
 }
 
 .cont-num {
@@ -169,7 +175,7 @@ p {
 
   .home-banner h1 {
     font-size: 1.6rem;
-    color: #1C1C1C;
+    color: #1c1c1c;
   }
 
   .itens-recentes .cards {

@@ -6,9 +6,7 @@ import { Search } from "lucide-react";
 import CardItem from "../../components/CardItem";
 import itemService from "../../services/itemService";
 
-
 export default function Itens() {
-
   const [itens, setItens] = useState([]);
   const [busca, setBusca] = useState("");
 
@@ -29,7 +27,6 @@ export default function Itens() {
     item.nome.toLowerCase().includes(busca.toLowerCase())
   );
 
-
   return (
     <section>
       <NavBar />
@@ -47,7 +44,7 @@ export default function Itens() {
             value={busca}
             onChange={(e) => setBusca(e.target.value)}
           />
-          <Search />
+          <Search id="iconeBusca" />
         </div>
         <section className="section-card">
           <p>
@@ -55,16 +52,17 @@ export default function Itens() {
           </p>
           <div className="container-cards">
             <div className="cards-itens">
-            {itensFiltrados.map((item) => (
-            <CardItem
-              key={item.id}
-              id={item.id}
-              imagem={item.imagem}  
-              titulo={item.nome}
-              desc={item.descricao}
-              local={`${item.cidade}, ${item.estado}`}
-              badge={item.categoria?.nome || "Sem categoria"}
-            />))}
+              {itensFiltrados.map((item) => (
+                <CardItem
+                  key={item.id}
+                  id={item.id}
+                  imagem={item.imagem}
+                  titulo={item.nome}
+                  desc={item.descricao}
+                  local={`${item.cidade}, ${item.estado}`}
+                  badge={item.categoria?.nome || "Sem categoria"}
+                />
+              ))}
             </div>
           </div>
         </section>

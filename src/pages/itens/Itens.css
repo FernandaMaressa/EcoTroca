@@ -1,6 +1,6 @@
 .container-lista-itens {
   padding: 2rem;
-  background-color: #ECFDF5;
+  background-color: #ecfdf5;
   text-align: center;
   margin-bottom: 1.5rem;
 }
@@ -22,7 +22,14 @@
 #buscarItem {
   border: none;
   width: 100%;
-  padding: 1px 4px;
+  padding: 3px 7px;
+}
+#buscarItem:focus {
+  border: none;
+  outline: none;
+}
+#iconeBusca:hover {
+  cursor: pointer;
 }
 
 .section-card {
@@ -49,7 +56,7 @@
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   cursor: pointer;
