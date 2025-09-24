@@ -25,6 +25,7 @@ export default function Perfil() {
       const token = localStorage.getItem(import.meta.env.VITE_TOKEN_KEY);
       const userDataString = localStorage.getItem(import.meta.env.VITE_USER_KEY);
 
+      // Só redireciona para login se faltar token ou dados básicos do usuário
       if (!token || !userDataString) {
         navigate("/login");
         return;
@@ -32,18 +33,26 @@ export default function Perfil() {
 
       try {
         setPerfilLoading(true);
+        setError(null);
 
         const usuario = JSON.parse(userDataString);
 
+        // Carrega dados completos do perfil
         const dadosCompletos = await usuarioService.buscarDadosUsuario(usuario.id);
         setPerfil(dadosCompletos);
 
-        const itensDoUsuario = await itemService.buscarDadosItemUsuario(usuario.id);
-        setItens(itensDoUsuario);
+        // Carrega itens do usuário — erros daqui não deslogam
+        try {
+          const itensDoUsuario = await itemService.buscarDadosItemUsuario(usuario.id);
+          setItens(itensDoUsuario || []); // garante array vazio se vier null/undefined
+        } catch (err) {
+          console.error("Erro ao carregar itens:", err);
+          setError("Não foi possível carregar seus itens, tente novamente mais tarde.");
+          setItens([]); // fallback para renderizar a mensagem de 'nenhum item'
+        }
       } catch (error) {
         console.error("Erro ao carregar dados do perfil:", error);
         setError("Falha ao carregar os dados do perfil.");
-        handleLogout();
       } finally {
         setPerfilLoading(false);
       }
@@ -56,7 +65,8 @@ export default function Perfil() {
     return <p>Carregando perfil...</p>;
   }
 
-  if (error) {
+  if (error && !perfil) {
+    // Erro crítico ao carregar o perfil (não os itens)
     return <p>Erro: {error}</p>;
   }
 
@@ -70,7 +80,8 @@ export default function Perfil() {
             <img
               className="perfil-foto"
               src={perfil?.imgPerfil || "/default-avatar.png"}
-              alt="Foto de perfil" />
+              alt="Foto de perfil"
+            />
             <div>
               <h2>{perfil?.nome}</h2>
               <p>{perfil?.email}</p>
@@ -86,9 +97,13 @@ export default function Perfil() {
             </div>
           </div>
         </div>
+
         <Link to={"/anunciar"} className="btn-cadastrar">
           + Cadastrar Novo Item
         </Link>
+
+        {/* Mensagem de erro não bloqueia a listagem de "nenhum item" */}
+        {error && <p className="erro">{error}</p>}
 
         <h3>Meus Itens</h3>
         <div className="meus-itens">
@@ -100,8 +115,8 @@ export default function Perfil() {
                   <div className="item-info">
                     <h4>{item.nome}</h4>
                     <p>{item.descricao}</p>
-                    <span className="tag">{item.categoria.nome}</span>
-                    <p className="local">📍 {item.cidade}, {item.estado} </p>
+                    <span className="tag">{item.categoria?.nome}</span>
+                    <p className="local">📍 {item.cidade}, {item.estado}</p>
                     <div className="item-buttons">
                       <button>Editar</button>
                       <button className="remover">Remover</button>
@@ -110,6 +125,8 @@ export default function Perfil() {
                 </div>
               ))
             ) : (
+              // Só mostra "nenhum item" quando não há itens;
+              // a mensagem de erro (se houver) aparece acima
               <p>Você ainda não cadastrou nenhum item.</p>
             )}
           </div>
