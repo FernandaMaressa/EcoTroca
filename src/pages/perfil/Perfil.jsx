@@ -20,6 +20,22 @@ export default function Perfil() {
     navigate("/login");
   };
 
+  const handleEditar = (item) => {
+    navigate("/anunciar", { state: { mode: "edit", item } });
+  };
+
+  const handleRemover = async (id) => {
+    const ok = window.confirm("Tem certeza que deseja remover este item?");
+    if (!ok) return;
+    try {
+      await itemService.deletarItem(id);
+      setItens((prev) => prev.filter((i) => i.id !== id));
+    } catch (err) {
+      console.error("Erro ao remover item:", err);
+      setError("Não foi possível remover o item. Tente novamente.");
+    }
+  };
+
   useEffect(() => {
     const fetchPerfil = async () => {
       const token = localStorage.getItem(import.meta.env.VITE_TOKEN_KEY);
@@ -39,14 +55,13 @@ export default function Perfil() {
         const dadosCompletos = await usuarioService.buscarDadosUsuario(usuario.id);
         setPerfil(dadosCompletos);
 
-      
         try {
           const itensDoUsuario = await itemService.buscarDadosItemUsuario(usuario.id);
-          setItens(itensDoUsuario || []); // garante array vazio se vier null/undefined
+          setItens(itensDoUsuario || []);
         } catch (err) {
           console.error("Erro ao carregar itens:", err);
           setError("Não foi possível carregar seus itens, tente novamente mais tarde.");
-          setItens([]); 
+          setItens([]);
         }
       } catch (error) {
         console.error("Erro ao carregar dados do perfil:", error);
@@ -59,13 +74,8 @@ export default function Perfil() {
     fetchPerfil();
   }, [navigate]);
 
-  if (perfilLoading) {
-    return <p>Carregando perfil...</p>;
-  }
-
-  if (error && !perfil) {
-    return <p>Erro: {error}</p>;
-  }
+  if (perfilLoading) return <p>Carregando perfil.</p>;
+  if (error && !perfil) return <p>Erro: {error}</p>;
 
   return (
     <div>
@@ -99,7 +109,6 @@ export default function Perfil() {
           + Cadastrar Novo Item
         </Link>
 
-        {/* Mensagem de erro não bloqueia a listagem de "nenhum item" */}
         {error && <p className="erro">{error}</p>}
 
         <h3>Meus Itens</h3>
@@ -115,15 +124,13 @@ export default function Perfil() {
                     <span className="tag">{item.categoria?.nome}</span>
                     <p className="local">📍 {item.cidade}, {item.estado}</p>
                     <div className="item-buttons">
-                      <button>Editar</button>
-                      <button className="remover">Remover</button>
+                      <button onClick={() => handleEditar(item)}>Editar</button>
+                      <button className="remover" onClick={() => handleRemover(item.id)}>Remover</button>
                     </div>
                   </div>
                 </div>
               ))
             ) : (
-              // Só mostra "nenhum item" quando não há itens;
-              // a mensagem de erro (se houver) aparece acima
               <p>Você ainda não cadastrou nenhum item.</p>
             )}
           </div>
