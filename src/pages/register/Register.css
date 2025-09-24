@@ -176,6 +176,11 @@ form input:focus {
   background-color: rgba(216, 211, 211, 0.671);
 }
 
+#imgPerfil {
+  margin: auto;
+  padding-bottom: 20px;
+}
+
 @media (max-width: 600px) {
   .registerInfo {
     width: 300px;

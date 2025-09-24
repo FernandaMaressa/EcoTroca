@@ -9,7 +9,8 @@ import { Upload } from "lucide-react";
 
 const toInputDate = (value) => {
   if (!value) return "";
-  if (typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value)) return value;
+  if (typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value))
+    return value;
 
   const d = new Date(value);
   if (Number.isNaN(d.getTime())) return "";
@@ -73,7 +74,9 @@ function Cadastro() {
           );
           setCidades(cidadesData);
         } catch (error) {
-          setError(`Falha ao carregar cidades para ${form.estado}. Tente novamente.`);
+          setError(
+            `Falha ao carregar cidades para ${form.estado}. Tente novamente.`
+          );
           setCidades([]);
         }
       };
@@ -133,7 +136,13 @@ function Cadastro() {
   };
 
   const validate = () => {
-    if (!form.nome || !form.email || !form.estado || !form.cidade || !form.dataNasc) {
+    if (
+      !form.nome ||
+      !form.email ||
+      !form.estado ||
+      !form.cidade ||
+      !form.dataNasc
+    ) {
       return "Por favor, preencha todos os campos obrigatórios.";
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
@@ -223,7 +232,9 @@ function Cadastro() {
     } catch (error) {
       setError(
         error?.response?.data?.error ||
-          (editMode ? "Falha ao atualizar usuário." : "Falha ao criar usuário. Tente novamente.")
+          (editMode
+            ? "Falha ao atualizar usuário."
+            : "Falha ao criar usuário. Tente novamente.")
       );
     } finally {
       setSaving(false);
@@ -239,7 +250,11 @@ function Cadastro() {
         </div>
         <div className="registerInfo">
           <h2>{editMode ? "Editar Dados" : "Criar Conta"}</h2>
-          <p>{editMode ? "Atualize suas informações" : "Junte-se a nossa comunidade sustentavel"}</p>
+          <p>
+            {editMode
+              ? "Atualize suas informações"
+              : "Junte-se a nossa comunidade sustentavel"}
+          </p>
 
           <div className="registerForms">
             {error && <p className="error-message">{error}</p>}
@@ -265,7 +280,7 @@ function Cadastro() {
                   value={form.email}
                   onChange={handleChange}
                   required
-                  disabled={editMode} 
+                  disabled={editMode}
                 />
               </div>
 
@@ -380,7 +395,12 @@ function Cadastro() {
                   Selecionar <Upload />
                 </label>
                 {form.imgPerfil && (
-                  <img src={form.imgPerfil} alt="Preview" width="120" />
+                  <img
+                    src={form.imgPerfil}
+                    alt="Preview"
+                    width="120"
+                    id="imgPerfil"
+                  />
                 )}
               </div>
 
