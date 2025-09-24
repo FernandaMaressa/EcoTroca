@@ -25,7 +25,6 @@ export default function Perfil() {
       const token = localStorage.getItem(import.meta.env.VITE_TOKEN_KEY);
       const userDataString = localStorage.getItem(import.meta.env.VITE_USER_KEY);
 
-      // Só redireciona para login se faltar token ou dados básicos do usuário
       if (!token || !userDataString) {
         navigate("/login");
         return;
@@ -37,18 +36,17 @@ export default function Perfil() {
 
         const usuario = JSON.parse(userDataString);
 
-        // Carrega dados completos do perfil
         const dadosCompletos = await usuarioService.buscarDadosUsuario(usuario.id);
         setPerfil(dadosCompletos);
 
-        // Carrega itens do usuário — erros daqui não deslogam
+      
         try {
           const itensDoUsuario = await itemService.buscarDadosItemUsuario(usuario.id);
           setItens(itensDoUsuario || []); // garante array vazio se vier null/undefined
         } catch (err) {
           console.error("Erro ao carregar itens:", err);
           setError("Não foi possível carregar seus itens, tente novamente mais tarde.");
-          setItens([]); // fallback para renderizar a mensagem de 'nenhum item'
+          setItens([]); 
         }
       } catch (error) {
         console.error("Erro ao carregar dados do perfil:", error);
@@ -66,7 +64,6 @@ export default function Perfil() {
   }
 
   if (error && !perfil) {
-    // Erro crítico ao carregar o perfil (não os itens)
     return <p>Erro: {error}</p>;
   }
 
@@ -88,7 +85,7 @@ export default function Perfil() {
               <p className="itens-cadastrados">{itens.length} Itens cadastrados</p>
             </div>
             <div className="perfil-actions">
-              <Link to={"/editarperfil"} className="perfil-actions">
+              <Link to="/register" state={{ mode: "edit" }} className="perfil-actions">
                 Alterar Dados
               </Link>
               <Link to={"/login"} onClick={handleLogout} className="perfil-actions">
